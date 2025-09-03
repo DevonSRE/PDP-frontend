@@ -1,0 +1,123 @@
+import { cn } from "@/lib/utils"
+
+export function HeroBg({ className, ...props}: React.ComponentProps<"svg">){
+    return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="1680"
+      height="951"
+      viewBox="0 0 1680 951"
+      fill="none"
+      className={cn(className)}
+      {...props}
+    >
+      <rect x="1" width="1689" height="951" fill="url(#paint0_linear_2093_552)" />
+      <circle cx="1268" cy="308" r="7" fill="white" />
+      <circle cx="1671" cy="308" r="7" fill="white" />
+      <circle cx="1269" cy="534" r="7" fill="white" />
+      <circle cx="358" cy="534" r="7" fill="white" />
+      <circle cx="258" cy="666" r="7" fill="white" />
+      <circle cx="393" cy="666" r="7" fill="white" />
+      <circle cx="180" cy="534" r="7" fill="white" />
+      <circle cx="358" cy="399" r="7" fill="white" />
+      <circle cy="399" r="7" fill="white" />
+      <path d="M20.5 391H348.5V63L20.5 391Z" fill="url(#paint1_linear_2093_552)" />
+      <path d="M350.5 414L198.5 528H350.5V414Z" fill="url(#paint2_linear_2093_552)" />
+      <path d="M349 408H10V527H181.084L349 408Z" fill="url(#paint3_linear_2093_552)" />
+      <path d="M1277.5 520V316H1645.53L1277.5 520Z" fill="url(#paint4_linear_2093_552)" />
+      <path d="M1670 540.5H1282.5L1670 946.5V540.5Z" fill="url(#paint5_linear_2093_552)" />
+      <path d="M1298 9.5L1675 293.5V9.5H1298Z" fill="url(#paint6_linear_2093_552)" />
+      <path d="M1641 295.5H1279.5V26.5L1641 295.5Z" fill="url(#paint7_linear_2093_552)" />
+      <defs>
+        <linearGradient
+          id="paint0_linear_2093_552"
+          x1="845.5"
+          y1="0"
+          x2="845.5"
+          y2="951"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop offset="0.716346" stopColor="#F5F5F5" />
+          <stop offset="1" stopColor="#F5F5F5" stopOpacity="0" />
+        </linearGradient>
+        <linearGradient
+          id="paint1_linear_2093_552"
+          x1="190.5"
+          y1="231"
+          x2="245.658"
+          y2="319.088"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="white" />
+          <stop offset="1" stopColor="white" stopOpacity="0" />
+        </linearGradient>
+        <linearGradient
+          id="paint2_linear_2093_552"
+          x1="260.768"
+          y1="523.653"
+          x2="333.833"
+          y2="463.171"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="white" />
+          <stop offset="1" stopColor="white" stopOpacity="0" />
+        </linearGradient>
+        <linearGradient
+          id="paint3_linear_2093_552"
+          x1="148.874"
+          y1="522.462"
+          x2="215.399"
+          y2="404.805"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="white" />
+          <stop offset="1" stopColor="white" stopOpacity="0" />
+        </linearGradient>
+        <linearGradient
+          id="paint4_linear_2093_552"
+          x1="1456.75"
+          y1="321.5"
+          x2="1345"
+          y2="470.5"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="white" />
+          <stop offset="1" stopColor="white" stopOpacity="0" />
+        </linearGradient>
+        <linearGradient
+          id="paint5_linear_2093_552"
+          x1="1636.5"
+          y1="777"
+          x2="1540.67"
+          y2="484.392"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="white" />
+          <stop offset="1" stopColor="white" stopOpacity="0" />
+        </linearGradient>
+        <linearGradient
+          id="paint6_linear_2093_552"
+          x1="1496"
+          y1="124.5"
+          x2="1609.6"
+          y2="234.482"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="white" />
+          <stop offset="1" stopColor="white" stopOpacity="0" />
+        </linearGradient>
+        <linearGradient
+          id="paint7_linear_2093_552"
+          x1="1455.57"
+          y1="33.7524"
+          x2="1302.08"
+          y2="186.205"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="white" />
+          <stop offset="1" stopColor="white" stopOpacity="0" />
+        </linearGradient>
+      </defs>
+    </svg>
+    );
+}

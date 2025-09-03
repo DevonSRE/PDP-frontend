@@ -1,20 +1,17 @@
-import React from "react";
-import Image from "next/image";
+import React from "react"
+import Image from "next/image"
+import { HeroBg } from "@/components/icon/hero-icon"
 
-
-
-export function HeroSection () {
+export function HeroSection() {
   return (
-    <section
-  className="relative w-full overflow-hidden pt-12 bg-white 
-             bg-[url('/assets/hero_background_left.svg'),url('/assets/hero_background_right.svg')] 
-             bg-no-repeat bg-[left_center,right_center] bg-[auto_100%]"
-      >
+    <section className="relative w-full overflow-hidden pt-12 bg-white">
+      {/* Background SVG */}
+      <HeroBg className="absolute inset-0 w-full h-full object-cover z-0" />
 
-    
-      <div className="max-w-5xl mx-auto text-center px-4 md:px-8 pt-20 md:pt-20">
+      {/* Content sits on top */}
+      <div className="relative z-10 max-w-5xl mx-auto text-center px-4 md:px-8 pt-20 md:pt-20">
         {/* Badge */}
-       <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-gray-100 text-sm font-medium mb-6">
+        <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-gray-100 text-sm font-medium mb-6">
           <span className="text-yellow-800">🆕</span>
           <span>2025 Course Schedule now available.</span>
           <a href="#" className="underline font-semibold">
@@ -26,14 +23,12 @@ export function HeroSection () {
         <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-6 font-poppins pt-12">
           Delivering{" "}
           <span className="text-yellow-500">Cost-Effective</span> and Flexible{" "}
-        <span className="relative text-teal-600 bg-white shadow-sm px-2 py-1 rounded pt-2">
-        Training Solutions
-        {/* Gradient border line */}
-        <span className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-b from-white-500 via-green-500 to-yellow-500 rounded-b"></span>
-        </span>
+          <span className="relative text-teal-600 bg-white shadow-sm px-2 py-1 rounded pt-2">
+            Training Solutions
+            {/* Gradient border line */}
+            <span className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-b from-white via-green-500 to-yellow-500 rounded-b"></span>
+          </span>
         </h1>
-
-
 
         {/* Subtext */}
         <p className="text-gray-600 max-w-3xl mx-auto mb-10 font-poppins">
@@ -46,7 +41,7 @@ export function HeroSection () {
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
           <a
             href="#"
-            className="px-6 py-3 bg-teal-700 font-poppins text-white font-poppins rounded-full font-medium shadow-md hover:bg-teal-800 transition-colors"
+            className="px-6 py-3 bg-teal-700 font-poppins text-white rounded-full font-medium shadow-md hover:bg-teal-800 transition-colors"
           >
             Book Training Now
           </a>
@@ -59,18 +54,19 @@ export function HeroSection () {
         </div>
       </div>
 
-      <div className="relative flex justify-start">
-        <Image src="/assets/hero_image.svg"
+      {/* Foreground image + overlay */}
+      <div className="relative flex justify-start z-10">
+        <Image
+          src="/assets/hero_image.svg"
           alt="Training session"
           className="max-w-6xl w-full object-contain"
           width={800}
           height={400}
         />
 
-        {/* Yellow overlay inside image container */}
+        {/* Yellow overlay */}
         <div className="absolute bottom-0 left-0 w-full h-40 bg-yellow-500 rounded-t-xl opacity-80"></div>
       </div>
     </section>
-  );
-};
-
+  )
+}

@@ -1,3 +1,4 @@
+import { HeroBg } from "@/components/icon/hero-icon";
 import { ApproachSection } from "@/features/home/components/approach-section";
 import { CapacitySection } from "@/features/home/components/capacity-section";
 import ContactForm from "@/features/home/components/contact-form";
@@ -12,6 +13,7 @@ import Image from "next/image";
 export default function Home() {
     return (
     <div className="HomePage">
+     
     <HeroSection/>
     <HomePageStat/>
     <CapacitySection/>
