@@ -2,8 +2,7 @@ import { cn } from "@/lib/utils"
 
 export function AboutMainBG({ className, ...props}: React.ComponentProps<"svg">){
     return (
-        <svg width="1680" height="1577" viewBox="0 0 1680 1577" fill="none" xmlns="http://www.w3.org/2000/svg">
-             <svg
+    <svg
       xmlns="http://www.w3.org/2000/svg"
       width="1680"
       height="951"
@@ -11,7 +10,8 @@ export function AboutMainBG({ className, ...props}: React.ComponentProps<"svg">)
       fill="none"
       className={cn(className)}
       {...props}
-    ></svg>
+    >
+
 <g clip-path="url(#clip0_373_5062)">
 <rect width="1680" height="1577" fill="black"/>
 <path d="M-43.3979 304.743L-251.455 -147.189C-257.677 -160.705 -249.523 -166.729 -244.668 -168.051L-145.504 -154.614C-134.826 -151.583 -126.729 -142.169 -124.015 -137.842L38.3564 212.856C41.9691 221.266 38.2809 228.026 35.9852 230.356L-25.8983 307.114C-32.9635 312.493 -40.5085 307.775 -43.3979 304.743Z" fill="url(#paint0_linear_373_5062)"/>
