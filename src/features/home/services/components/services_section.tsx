@@ -11,6 +11,7 @@ const OurServicesSection = () => {
         <ServiceBox
           imageSrc='/assets/s1.svg'
           title="Training Solutions"
+          titleColor='text-[#009981]'
           items={[
             {
               title: 'Accredited Training Programs',
@@ -29,15 +30,15 @@ const OurServicesSection = () => {
             },
           ]}
           buttonText="View Training Solutions"
-          buttonColor="bg-teal-500"
+          buttonColor="bg-[#009981]"
           buttonHoverColor="hover:bg-teal-600"
-          isImageLeft={true}
         />
 
         {/* Consulting Services Section */}
         <ServiceBox
           imageSrc='/assets/s2.svg'
           title="Consultancy Solutions"
+          titleColor='text-[#E4B800]'
           items={[
             {
               title: 'Policy and Research',
@@ -56,15 +57,15 @@ const OurServicesSection = () => {
             },
           ]}
           buttonText="View Our Services"
-          buttonColor="bg-yellow-500"
+          buttonColor="bg-[#E4B800]"
           buttonHoverColor="hover:bg-yellow-600"
-          isImageLeft={false}
         />
 
         {/* Other Programs Section */}
         <ServiceBox
           imageSrc='/assets/s3.svg'
           title="Other Programs"
+          titleColor='text-[#005A92]'
           items={[
             {
               title: 'Project Management',
@@ -73,9 +74,8 @@ const OurServicesSection = () => {
             },
           ]}
           buttonText="View Other Programs"
-          buttonColor="bg-blue-500"
+          buttonColor="bg-[#005A92]"
           buttonHoverColor="hover:bg-blue-600"
-          isImageLeft={true}
         />
       </div>
     </div>
