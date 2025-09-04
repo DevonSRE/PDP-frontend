@@ -47,6 +47,7 @@
 
   --color-brand-green: var(--brand-green);
   --color-brand-green-text: var(--brand-green-text);
+  --color-brand-yellow-dark: var(--brand-yellow-dark);
 }
 
 :root {
@@ -84,6 +85,7 @@
   --foreground: oklch(0.145 0 0);
   --brand-green: #002A20;
   --brand-green-text: #005144;
+  --brand-yellow-dark: #E4B800;
 }
 
 .dark {
