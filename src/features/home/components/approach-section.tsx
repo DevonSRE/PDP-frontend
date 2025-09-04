@@ -4,18 +4,26 @@ import Image from "next/image";
 
 export function ApproachSection (){
   return (
-    <section className="bg-green-900 text-white py-16 px-6">
+    <section className="relative overflow-hidden bg-brand-green text-white py-16 px-6">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+
         {/* Left Image */}
-        <div className="relative w-full max-w-4xl mx-auto">
+        <div className="absolute -left-10 w-full max-w-4xl mx-auto">
           {/* Main Image */}
-          <Image
-            src="/assets/circulargreen.png"
+                    <div className="rounded-full h-fit w-fit p-14 bg-white/5 ">
+
+          <div className="rounded-full h-fit w-fit p-14 bg-white/5 ">
+              <div className="rounded-full h-fit w-fit p-14 bg-white/5 ">
+             <Image
+            src="/assets/circular_image.png"
             alt="Training session"
             width={800}
             height={600}
-            className="w-full h-auto object-cover relative z-10 rounded-lg"
-          />
+            className="w-full h-auto object-cover z-10 rounded-lg"
+          /></div>
+          </div>
+          </div>
+      
         </div>
 
 

@@ -1,47 +1,51 @@
-import React from 'react';
+import React from "react"
+import { ContactBg } from "@/components/icon/contact-bg"
 
-const ContactForm: React.FC = () => {
+export function ContactSection() {
   return (
-    <div className="flex items-center justify-center bg-[#000000] p-4 font-sans py-48 px-16">
-      <div className="w-full max-w-2xl rounded-lg bg-[#000000] p-8 text-center shadow-2xl">
-        {/* Header */}
-        <h2 className="text-[26px] font-bold text-yellow-500 md:text-4xl text-poppins">
+    <section className="relative w-full overflow-hidden bg-black py-20">
+      {/* Background SVG */}
+      <ContactBg className="absolute inset-0 w-full h-full object-cover z-0 text-yellow-500/10" />
+
+      {/* Content sits on top */}
+      <div className="relative z-10 max-w-2xl mx-auto text-center px-4 md:px-8">
+        {/* Heading */}
+        <h2 className="text-3xl md:text-4xl font-bold text-yellow-500 font-poppins">
           Get In Touch
         </h2>
-        <p className="text-[15px] text-sm text-gray-400 text-poppins pt-4">
-          Have questions or need tailored training solutions for your institution? Our team is here to help. Reach out and let's explore how we can work together to strengthen public systems and build capacity where it matters most.
+        <p className="text-[15px] text-gray-400 font-poppins pt-4">
+          Have questions or need tailored training solutions for your institution? 
+          Our team is here to help. Reach out and let's explore how we can work together 
+          to strengthen public systems and build capacity where it matters most.
         </p>
 
         {/* Form */}
         <form className="mt-8 space-y-6">
-          {/* Input Fields */}
           <input
             type="text"
             placeholder="Your full name"
-            className="w-full rounded-md border-2 border-gray-700 bg-transparent py-3 px-4 text-gray-200 text-poppins text-[14px] outline-none transition-colors duration-300 focus:border-yellow-500"
+            className="w-full rounded-md border-2 border-gray-700 bg-transparent py-3 px-4 text-gray-200 text-[14px] font-poppins outline-none transition-colors duration-300 focus:border-yellow-500"
           />
           <input
             type="email"
             placeholder="Your Email"
-            className="w-full rounded-md border-2 border-gray-700 bg-transparent py-3 px-4 text-gray-200 text-poppins text-[14px] outline-none transition-colors duration-300 focus:border-yellow-500"
+            className="w-full rounded-md border-2 border-gray-700 bg-transparent py-3 px-4 text-gray-200 text-[14px] font-poppins outline-none transition-colors duration-300 focus:border-yellow-500"
           />
           <textarea
             placeholder="Your Message"
             rows={5}
-            className="w-full resize-none rounded-md border-2 border-gray-700 bg-transparent py-3 px-4 text-gray-200 text-poppins text-[14px] outline-none transition-colors duration-300 focus:border-yellow-500"
+            className="w-full resize-none rounded-md border-2 border-gray-700 bg-transparent py-3 px-4 text-gray-200 text-[14px] font-poppins outline-none transition-colors duration-300 focus:border-yellow-500"
           ></textarea>
 
-          {/* Submit Button */}
           <button
             type="submit"
-            className="w-full rounded-md bg-gradient-to-r from-yellow-400 to-yellow-600 py-3 font-semibold text-black  text-poppins transition-transform duration-300 hover:scale-105"
+            className="w-full rounded-md bg-gradient-to-r from-yellow-400 to-yellow-600 py-3 font-semibold text-black font-poppins transition-transform duration-300 hover:scale-105"
           >
             Send Message
           </button>
         </form>
       </div>
-    </div>
-  );
-};
-
-export default ContactForm;
+    </section>
+  )
+}
+export default ContactSection;

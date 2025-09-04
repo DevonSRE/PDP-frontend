@@ -1,5 +1,6 @@
 import React from 'react';
 import ProfessionalCard from './professional-card';
+import { AboutMainBG } from '@/components/icon/about-main-bg';
 
 const MeetTheProfessional = () => {
   // Data for professionals (replace with your actual data)
@@ -80,10 +81,12 @@ const MeetTheProfessional = () => {
   ];
 
   return (
-    <section className="relative bg-black py-20 overflow-hidden">
-      {/* Background shapes (from your image) */}
-      <div className="absolute top-0 left-0 w-48 h-48 bg-custom-green-light transform -translate-x-1/2 -translate-y-1/2 rotate-45 opacity-20 z-0"></div>
-      <div className="absolute bottom-0 right-0 w-64 h-64 bg-custom-yellow transform translate-x-1/2 translate-y-1/2 rotate-45 opacity-20 z-0"></div>
+            <section className="relative w-full overflow-hidden pt-12 bg-white">
+              {/* Background SVG */}
+              <AboutMainBG className="absolute inset-0 w-full h-full object-cover z-0" />
+    
+
+
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center text-white mb-16">
