@@ -17,7 +17,7 @@ export function GetContactSection() {
       </div>
 
       {/* Contact Card */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto bg-white p-6 md:p-12 rounded-2xl shadow-lg">
         {/* Left Side - Info */}
         <div className="bg-teal-900 text-white rounded-2xl p-8 shadow-lg flex flex-col justify-between">
           {/* <OfficeInfoBg className="absolute inset-0 w-full h-full object-cover z-0" /> */}
@@ -60,41 +60,61 @@ export function GetContactSection() {
         </div>
 
         {/* Right Side - Form */}
-        <div className="bg-white rounded-2xl p-8 shadow-lg">
-          <h3 className="text-lg  font-bold text-brand-green-text mb-6">
+        <div className=" p-8 ">
+          <h3 className="text-lg  font-bold text-brand-green-text ">
             Contact Us
           </h3>
+          <h1 className="text-sm  font-light text-black mb-12">
+            Have questions or need tailored training solutions for your institution? Our team is here to help. Reach out and let’s explore how we can work together to strengthen public systems and build capacity where it matters most.
+          </h1>
           <form className="space-y-6">
             <div>
-              <label className="block text-sm font-medium text-black mb-2">
+              <label className="block text-sm font-light text-black mb-2">
                 Your Full Name
               </label>
               <input
                 type="text"
                 placeholder="Benjamin Benjamin J"
-                className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-teal-600 focus:outline-none placeholder-black placeholder: text-black "
+                className="w-full 
+               border-b-2 border-black/20 px-4 py-2 
+                focus:border-2 focus:border-teal-600 focus:rounded-lg 
+                focus:outline-none focus:ring-0
+                placeholder-black font-poppins font-semibold
+              "
               />
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-black mb-2">
+              <label className="block text-sm font-light text-black mb-2">
                 Your Email Address
               </label>
               <input
                 type="email"
                 placeholder="benjamin@email.com"
-                className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-teal-600 focus:outline-none"
+                className="
+                w-full 
+                border-b-2 border-black/20 px-4 py-2 
+                focus:border-2 focus:border-teal-600 focus:rounded-lg 
+                focus:outline-none focus:ring-0
+                placeholder-black font-poppins font-semibold
+              "
               />
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-600 mb-2">
+              <label className="block text-sm font-light text-black mb-2">
                 Your Message
               </label>
-              <textarea
-                placeholder="Input your message here in details"
-                rows={4}
-                className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-teal-600 focus:outline-none"
+              <input
+                placeholder="Enter your message here..."
+                  type="details"
+                className="
+                w-full 
+                border-b-2 border-black/20 px-4 py-2 
+                focus:border-2 focus:border-teal-600 focus:rounded-lg 
+                focus:outline-none focus:ring-0
+                placeholder-black font-poppins font-semibold
+              "
               />
             </div>
 
