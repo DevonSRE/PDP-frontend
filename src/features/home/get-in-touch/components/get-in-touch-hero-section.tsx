@@ -6,9 +6,9 @@ export function GetContactSection() {
   return (
     <section className="w-full px-6 py-58 bg-gray-50">
       {/* Heading */}
-      <div className="text-center mb-12">
+      <div className="text-center mb-32">
         <h2 className="text-2xl font-bold text-brand-green-text font-poppins">Get In Touch</h2>
-        <p className="mt-2 text-gray-600 max-w-2xl mx-auto font-poppins">
+        <p className="mt-2 text-black max-w-2xl mx-auto font-poppins">
           Have questions or need tailored training solutions for your institution?
           Our team is here to help. Reach out and let’s explore how we can work
           together to strengthen public systems and build capacity where it
@@ -17,7 +17,7 @@ export function GetContactSection() {
       </div>
 
       {/* Contact Card */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto bg-white p-6 md:p-12 rounded-2xl shadow-lg">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto bg-white p-2 md:p-12 rounded-2xl shadow-lg">
         {/* Left Side - Info */}
         <div className="bg-teal-900 text-white rounded-2xl p-8 shadow-lg flex flex-col justify-between">
           {/* <OfficeInfoBg className="absolute inset-0 w-full h-full object-cover z-0" /> */}
