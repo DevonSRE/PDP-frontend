@@ -14,24 +14,29 @@ const OurServicesSection = () => {
           titleColor='text-[#009981]'
           items={[
             {
-              title: 'Accredited Training Programs',
+              title: 'Professional Development Programs',
               description:
-                'We offer courses in leadership, governance, procurement, and more, all accredited by the Bureau of Public Procurement (BPP).',
+                'Build capacity in leadership, communication, and strategic planning tailored to the African context.',
             },
             {
-              title: 'Government Service Philosophy',
+              title: 'Government System Strengthening',
               description:
-                'Courses designed to instill a public service mindset focused on efficiency, transparency, and accountability.',
+                'Enhance public service delivery through transparency and accountability-based training solutions.',
             },
             {
-              title: 'Mentoring & Coaching',
+              title: 'Third-Party Monitoring',
               description:
-                'We provide one-on-one and group coaching to help you achieve your professional goals.',
+                'Ensure transparency and impact through independent project assessments and evaluations.',
+            },
+             {
+              title: 'Quality Assurance Training',
+              description:
+                'Learn best practices in quality control, compliance, and performance standardization.',
             },
           ]}
           buttonText="View Training Solutions"
           buttonColor="bg-[#009981]"
-          buttonHoverColor="hover:bg-teal-600"
+          buttonHoverColor="hover:bg-[#009981]/50"
         />
 
         {/* Consulting Services Section */}
@@ -41,19 +46,24 @@ const OurServicesSection = () => {
           titleColor='text-[#E4B800]'
           items={[
             {
-              title: 'Policy and Research',
+              title: 'Skills-Gap Analysis',
               description:
-                'We conduct in-depth research to inform policy formulation and implementation.',
+                'Identify organizational performance gaps and receive tailored development interventions.',
             },
             {
-              title: 'Governance Frameworks',
+              title: 'Competency Frameworks',
               description:
-                'Our team designs and implements governance frameworks for institutions to improve performance.',
+                'Design structured models for hiring, training, and performance improvement.',
             },
             {
-              title: 'Learning & Mentoring',
+              title: 'Training of Trainers (ToT)',
               description:
-                'Providing tailored support to organizations for continuous professional development.',
+                'Train your internal facilitators with proven methods and quality assurance practices.',
+            },
+             {
+              title: 'Coaching & Mentoring',
+              description:
+                'Leadership development programs to empower individuals and improve organizational outcomes.',
             },
           ]}
           buttonText="View Our Services"
