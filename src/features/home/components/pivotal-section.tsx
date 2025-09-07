@@ -49,7 +49,7 @@ const cardData = [
 
 const PivotalSection = () => {
   return (
-    <div className="bg-[#F5F5F5] py-36 px-4 text-center font-poppins">
+    <div className="bg-white py-36 px-4 text-center font-poppins">
       {/* Main Heading and First Card */}
       <h2 className="text-3xl font-bold text-black">
         Why <span className="text-[#009981]">Choose Pivotal?</span>
