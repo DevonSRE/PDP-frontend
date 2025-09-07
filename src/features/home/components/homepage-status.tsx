@@ -17,7 +17,7 @@ export function HomePageStat() {
             </div>
 
             {/* Stats */}
-            <div className="md:col-span-4 grid grid-cols-2 md:grid-cols-4 text-center items-start font-poppins divide-x divide-white/50 divide-[0.5px]">
+            <div className="md:col-span-4 grid grid-cols-2 md:grid-cols-4 text-center items-start font-poppins divide-x divide-[0.5px]">
             <div className="px-4">
               <p className="text-3xl font-bold">15+</p>
               <p className="text-sm text-white">Government Partners</p>

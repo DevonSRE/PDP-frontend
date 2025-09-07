@@ -11,10 +11,10 @@ export function ContactBg({ className, ...props}: React.ComponentProps<"svg">){
             className={cn(className)}
             {...props}
         ></svg><svg width="1680" height="1059" viewBox="0 0 1680 1059" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g clip-path="url(#clip0_373_5003)">
+                <g clipPath="url(#clip0_373_5003)">
                     <rect width="1680" height="1059" fill="black" />
                     <g opacity="0.56">
-                        <g clip-path="url(#clip1_373_5003)">
+                        <g clipPath="url(#clip1_373_5003)">
                             <g filter="url(#filter0_g_373_5003)">
                                 <ellipse opacity="0.05" cx="1675.5" cy="-214.5" rx="636.5" ry="479.5" fill="white" />
                                 <ellipse opacity="0.05" cx="1816.5" cy="-204.5" rx="636.5" ry="479.5" fill="white" />
@@ -23,7 +23,7 @@ export function ContactBg({ className, ...props}: React.ComponentProps<"svg">){
                                 <ellipse opacity="0.05" cx="1352.5" cy="-299.5" rx="636.5" ry="373.5" fill="white" />
                             </g>
                         </g>
-                        <g clip-path="url(#clip2_373_5003)">
+                        <g clipPath="url(#clip2_373_5003)">
                             <g filter="url(#filter1_g_373_5003)">
                                 <ellipse opacity="0.05" cx="636.5" cy="479.5" rx="636.5" ry="479.5" transform="matrix(-1 0 0 1 641 -694)" fill="white" />
                                 <ellipse opacity="0.05" cx="636.5" cy="479.5" rx="636.5" ry="479.5" transform="matrix(-1 0 0 1 500 -684)" fill="white" />

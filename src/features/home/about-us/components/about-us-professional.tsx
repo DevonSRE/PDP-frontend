@@ -1,109 +1,89 @@
-import React from 'react';
-import ProfessionalCard from './professional-card';
-import { AboutMainBG } from '@/components/icon/about-main-bg';
+import React from "react";
+import ProfessionalCard from "./professional-card";
+import { AboutMainBG } from "@/components/icon/about-main-bg";
 
-const MeetTheProfessional = () => {
-  
-  const professionals = [
+ const professionals = [
     {
       name: "Olivia Rhye",
-      title: "Senior Barrister and Head of Litigation",
-      description: "Experienced Senior Barrister and Head of Litigation with 15 years experience in the legal field...",
-      image: "/assets/pro1.svg", 
-      flagImage: undefined,  
-      socialLinks: {
-        twitter: "#",
-        linkedin: "#",
-        globe: "#"
-      }
+      title: "Senior Governance Advisor or Lead \nProcurement Facilitator",
+      description:
+        "Expert in public financial management and institutional reforms across Africa. Over 20 years training senior civil servants and procurement professionals.",
+      image: "/assets/pro1.svg",
+      flagImage: undefined,
     },
     {
       name: "Dr. Oluwole Adenuga",
-      title: "Expert in Commercial Law and Corporate Governance",
-      description: "Over 20 years experience in corporate and commercial law, advising top-tier clients...",
-      image: "/assets/pro2.svg", 
+      title: "Senior Governance Advisor or Lead  \nProcurement Facilitator",
+      description:
+        "Expert in public financial management and institutional reforms across Africa. Over 20 years training senior civil servants and procurement professionals.",
+      image: "/assets/pro2.svg",
       flagImage: undefined,
-      socialLinks: {
-        twitter: "#",
-        linkedin: "#",
-        globe: "#"
-      }
     },
     {
       name: "Hon. Justice Ahmed",
-      title: "Retired Supreme Court Justice and Legal Advisor",
-      description: "Served 30 years in the judiciary, offering unparalleled insights into Nigerian law...",
-      image: "/assets/pro3.svg", 
-      flagImage: undefined, 
-      socialLinks: {
-        twitter: "#",
-        linkedin: "#",
-        globe: "#"
-      }
+      title: "Senior Governance Advisor or Lead  \nProcurement Facilitator",
+      description:
+        "Expert in public financial management and institutional reforms across Africa. Over 20 years training senior civil servants and procurement professionals.",
+      image: "/assets/pro3.svg",
+      flagImage: undefined,
     },
-    
+
     {
       name: "Olivia Rhye",
-      title: "Senior Barrister and Head of Litigation",
-      description: "Experienced Senior Barrister and Head of Litigation with 15 years experience in the legal field...",
-      image: "/assets/pro1.svg", 
-      flagImage: undefined, 
-      socialLinks: {
-        twitter: "#",
-        linkedin: "#",
-        globe: "#"
-      }
+      title: "Senior Governance Advisor or Lead  \nProcurement Facilitator",
+      description:
+        "Expert in public financial management and institutional reforms across Africa. Over 20 years training senior civil servants and procurement professionals.",
+      image: "/assets/pro1.svg",
+      flagImage: undefined,
     },
     {
       name: "Dr. Oluwole Adenuga",
-      title: "Expert in Commercial Law and Corporate Governance",
-      description: "Over 20 years experience in corporate and commercial law, advising top-tier clients...",
-      image: "/assets/pro2.svg", 
+      title: "Senior Governance Advisor or Lead  \nProcurement Facilitator",
+      description:
+        "Expert in public financial management and institutional reforms across Africa. Over 20 years training senior civil servants and procurement professionals.",
+      image: "/assets/pro2.svg",
       flagImage: undefined,
-      socialLinks: {
-        twitter: "#",
-        linkedin: "#",
-        globe: "#"
-      }
     },
     {
       name: "Hon. Justice Ahmed",
-      title: "Retired Supreme Court Justice and Legal Advisor",
-      description: "Served 30 years in the judiciary, offering unparalleled insights into Nigerian law...",
-      image: "/assets/pro3.svg", 
-      flagImage: undefined, 
-      socialLinks: {
-        twitter: "#",
-        linkedin: "#",
-        globe: "#"
-      }
+      title: "Senior Governance Advisor or Lead  \nProcurement Facilitator",
+      description:
+        "Expert in public financial management and institutional reforms across Africa. Over 20 years training senior civil servants and procurement professionals.",
+      image: "/assets/pro3.svg",
+      flagImage: undefined,
     },
   ];
 
-  return (
-            <section className="relative w-full overflow-hidden pt-12 bg-white">
-              {/* Background SVG */}
+  const MeetTheProfessional = () => {
+    return (
+      <section className="relative w-full overflow-hidden pt-12 bg-white">
+      {/* Background SVG */}
       <AboutMainBG className="absolute inset-0 w-full h-full object-cover z-0" />
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto  pt-72 relative z-10 justify-center-safe">
         <div className="text-center text-white mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 font-poppins">Meet The Professional</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 font-poppins">
+            Meet The Professional
+          </h2>
           <p className="text-md max-w-2xl mx-auto opacity-80 font-poppins">
-            Our team comprises of highly experienced and dedicated professionals who are passionate about delivering exceptional results. With diverse backgrounds and expertise, our team brings a wealth of knowledge and insights to every project. We are committed to providing innovative solutions that exceed client expectations, and we proudly stand behind the quality of our work.
+            Our team comprises of highly experienced and dedicated professionals
+            who are passionate about delivering exceptional results. With
+            diverse backgrounds and expertise, our team brings a wealth of
+            knowledge and insights to every project. We are committed to
+            providing innovative solutions that exceed client expectations, and
+            we proudly stand behind the quality of our work.
           </p>
         </div>
 
         {/* Professional Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8  pb-52 ">
           {professionals.map((pro, index) => (
             <ProfessionalCard
-              key={index} 
+              key={index}
               name={pro.name}
               title={pro.title}
               description={pro.description}
               image={pro.image}
-              flagImage={pro.flagImage}
-              socialLinks={pro.socialLinks}
             />
           ))}
         </div>

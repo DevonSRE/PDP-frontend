@@ -81,6 +81,10 @@ const OurServicesSection = () => {
               title: 'Project Management',
               description:
                 'Our project management courses equip you with the skills to lead successful projects from start to finish.',
+                note: 'specialized programs covering Framework Agreements, Health Commodities, Works Procurement, and more.',
+                subNote: 'Procurement Audits & Monitoring',
+                subNote2: 'e-Government Procurement Systems',
+                subNote3: 'Information Management for Procurement',
             },
           ]}
           buttonText="View Other Programs"

@@ -3,6 +3,10 @@ import React from "react";
 interface ServiceItem {
   title: string;
   description: string;
+  note?: string;      // ✅ made optional
+  subNote?: string;   // ✅ made optional
+  subNote2?: string;  // ✅ made optional
+  subNote3?: string;  // ✅ made optional
 }
 
 interface ServiceBoxProps {
@@ -51,6 +55,19 @@ const ServiceBox: React.FC<ServiceBoxProps> = ({
             <div>
               <h4 className="font-bold  italic text-2xl text-black">{item.title}</h4>
               <p className="font-light  italic text-black text-lg">{item.description}</p>
+
+              <p className="font-light  italic text-black text-sm mt-4"> {item.note}</p>
+              <ul className="list-disc list-inside space-y-1">
+                {item.subNote && (
+                  <li className="font-light italic text-black text-sm">{item.subNote}</li>
+                )}
+                {item.subNote2 && (
+                  <li className="font-light italic text-black text-sm">{item.subNote2}</li>
+                )}
+                {item.subNote3 && (
+                  <li className="font-light italic text-black text-sm">{item.subNote3}</li>
+                )}
+              </ul>
             </div>
           </div>
         ))}

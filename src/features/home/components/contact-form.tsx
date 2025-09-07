@@ -3,9 +3,11 @@ import { ContactBg } from "@/components/icon/contact-bg"
 
 export function ContactSection() {
   return (
-    <section className="relative w-full overflow-hidden bg-black py-20">
+    <section className="relative w-full h-full  overflow-hidden bg-black py-20">
       {/* Background SVG */}
-      <ContactBg className="absolute inset-0 w-full h-full object-cover z-0 text-yellow-500/10" />
+      <div className="absolute inset-0 z-0">
+        <ContactBg className="w-full h-full object-cover text-yellow-500/10" />
+      </div>
 
       {/* Content sits on top */}
       <div className="relative z-10 max-w-2xl mx-auto text-center px-4 md:px-8">
@@ -15,7 +17,7 @@ export function ContactSection() {
         </h2>
         <p className="text-[15px] text-gray-400 font-poppins pt-4">
           Have questions or need tailored training solutions for your institution? 
-          Our team is here to help. Reach out and let's explore how we can work together 
+          Our team is here to help. Reach out and let&apos;s explore how we can work together 
           to strengthen public systems and build capacity where it matters most.
         </p>
 
@@ -48,4 +50,5 @@ export function ContactSection() {
     </section>
   )
 }
-export default ContactSection;
+
+export default ContactSection

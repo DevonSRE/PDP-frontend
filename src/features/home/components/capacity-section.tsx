@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export function CapacitySection() {
   return (
-    <div className="bg-[#E8E8E8] py-24 font-poppins py-12">
+    <div className="bg-[#E8E8E8] font-poppins py-12">
       <section className="max-w-7xl mx-auto bg-white shadow-lg rounded-2xl p-24 grid md:grid-cols-2 gap-12">
         
         {/* What We Do */}
