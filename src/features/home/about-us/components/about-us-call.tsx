@@ -3,9 +3,12 @@ import React from 'react';
 
 export function CallToAction() {
   return (
-        <section className="relative w-full overflow-hidden pt-12 bg-white">
+        <section className="relative w-full overflow-hidden p-48 bg-white">
           {/* Background SVG */}
-          <AboutServicesBG className="absolute inset-0 w-full h-full object-cover z-0" />
+          <AboutServicesBG className="absolute -top-10 -left-90" />
+          <AboutServicesBG className="absolute top-10 -left-90" />
+                <AboutServicesBG className="absolute -top-10 -right-90" />
+                 <AboutServicesBG className="absolute top-20 -right-90" />
 
       {/* Content */}
       <div className="container mx-auto px-4 py-8 relative z-10 text-center font-poppins">

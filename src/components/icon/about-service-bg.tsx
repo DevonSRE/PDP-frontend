@@ -6,102 +6,30 @@ export function AboutServicesBG({
   ...props
 }: React.ComponentProps<"svg">) {
   return (
-    <svg
-      width="1680"
-      height="1577"
-      viewBox="0 0 1680 1577"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
+    <svg width="663" height="663" viewBox="0 0 663 663" fill="none" xmlns="http://www.w3.org/2000/svg"
       className={cn(className)}
       {...props}
     >
-    <svg width="1680" height="729" viewBox="0 0 1680 729" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <g clip-path="url(#clip0_381_1313)">
-    <rect width="1680" height="729" fill="url(#paint0_linear_381_1313)"/>
-    <circle cx="-48.5" cy="138.5" r="331.5" fill="white"/>
-    <circle cx="-17.6046" cy="202.796" r="259.689" fill="url(#paint1_linear_381_1313)"/>
-    <circle cx="-48.5" cy="138.5" r="222.5" fill="white"/>
-    <circle cx="-27.7632" cy="181.655" r="174.301" fill="url(#paint2_linear_381_1313)"/>
-    <circle cx="-48.5" cy="138.5" r="121.5" fill="white"/>
-    <circle cx="-37.1764" cy="162.065" r="95.1801" fill="url(#paint3_linear_381_1313)"/>
-    <circle cx="1658.5" cy="138.5" r="331.5" fill="white"/>
-    <circle cx="1689.4" cy="202.796" r="259.689" fill="url(#paint4_linear_381_1313)"/>
-    <circle cx="1658.5" cy="138.5" r="222.5" fill="white"/>
-    <circle cx="1679.24" cy="181.655" r="174.301" fill="url(#paint5_linear_381_1313)"/>
-    <circle cx="1658.5" cy="138.5" r="121.5" fill="white"/>
-    <circle cx="1669.82" cy="162.065" r="95.1801" fill="url(#paint6_linear_381_1313)"/>
-    <circle cx="331.5" cy="331.5" r="331.5" transform="matrix(1 0 0 -1 -380 845)" fill="white"/>
-    <circle cx="259.689" cy="259.689" r="259.689" transform="matrix(1 0 0 -1 -277.293 708.893)" fill="url(#paint7_linear_381_1313)"/>
-    <circle cx="222.5" cy="222.5" r="222.5" transform="matrix(1 0 0 -1 -271 736)" fill="white"/>
-    <circle cx="174.301" cy="174.301" r="174.301" transform="matrix(1 0 0 -1 -202.064 644.646)" fill="url(#paint8_linear_381_1313)"/>
-    <circle cx="121.5" cy="121.5" r="121.5" transform="matrix(1 0 0 -1 -170 635)" fill="white"/>
-    <circle cx="95.1801" cy="95.1801" r="95.1801" transform="matrix(1 0 0 -1 -132.356 585.115)" fill="url(#paint9_linear_381_1313)"/>
-    <circle cx="331.5" cy="331.5" r="331.5" transform="matrix(1 0 0 -1 1327 845)" fill="white"/>
-    <circle cx="259.689" cy="259.689" r="259.689" transform="matrix(1 0 0 -1 1429.71 708.893)" fill="url(#paint10_linear_381_1313)"/>
-    <circle cx="222.5" cy="222.5" r="222.5" transform="matrix(1 0 0 -1 1436 736)" fill="white"/>
-    <circle cx="174.301" cy="174.301" r="174.301" transform="matrix(1 0 0 -1 1504.94 644.646)" fill="url(#paint11_linear_381_1313)"/>
-    <circle cx="121.5" cy="121.5" r="121.5" transform="matrix(1 0 0 -1 1537 635)" fill="white"/>
-    <circle cx="95.1801" cy="95.1801" r="95.1801" transform="matrix(1 0 0 -1 1574.64 585.115)" fill="url(#paint12_linear_381_1313)"/>
-    </g>
+    <circle cx="331.5" cy="331.5" r="331.5" transform="matrix(1 0 0 -1 0 663)" fill="white"/>
+    <circle cx="259.689" cy="259.689" r="259.689" transform="matrix(1 0 0 -1 102.707 526.893)" fill="url(#paint0_linear_381_1368)"/>
+    <circle cx="222.5" cy="222.5" r="222.5" transform="matrix(1 0 0 -1 109 554)" fill="white"/>
+    <circle cx="174.301" cy="174.301" r="174.301" transform="matrix(1 0 0 -1 177.936 462.646)" fill="url(#paint1_linear_381_1368)"/>
+    <circle cx="121.5" cy="121.5" r="121.5" transform="matrix(1 0 0 -1 210 453)" fill="white"/>
+    <circle cx="95.1801" cy="95.1801" r="95.1801" transform="matrix(1 0 0 -1 247.644 403.115)" fill="url(#paint2_linear_381_1368)"/>
     <defs>
-    <linearGradient id="paint0_linear_381_1313" x1="840" y1="101.966" x2="840" y2="471.154" gradientUnits="userSpaceOnUse">
-    <stop stop-color="#F5F5F5" stop-opacity="0.557692"/>
-    <stop offset="0.528846" stop-color="#F5F5F5"/>
-    <stop offset="1" stop-color="#F5F5F5" stop-opacity="0"/>
-    </linearGradient>
-    <linearGradient id="paint1_linear_381_1313" x1="-17.6046" y1="-56.8931" x2="-17.6046" y2="462.485" gradientUnits="userSpaceOnUse">
+    <linearGradient id="paint0_linear_381_1368" x1="259.689" y1="0" x2="259.689" y2="519.378" gradientUnits="userSpaceOnUse">
     <stop stop-color="#F5F5F5"/>
     <stop offset="1" stop-color="#F5F5F5" stop-opacity="0"/>
     </linearGradient>
-    <linearGradient id="paint2_linear_381_1313" x1="-27.7632" y1="7.35376" x2="-27.7632" y2="355.956" gradientUnits="userSpaceOnUse">
+    <linearGradient id="paint1_linear_381_1368" x1="174.301" y1="0" x2="174.301" y2="348.602" gradientUnits="userSpaceOnUse">
     <stop stop-color="#F5F5F5"/>
     <stop offset="1" stop-color="#F5F5F5" stop-opacity="0"/>
     </linearGradient>
-    <linearGradient id="paint3_linear_381_1313" x1="-37.1764" y1="66.8852" x2="-37.1764" y2="257.245" gradientUnits="userSpaceOnUse">
+    <linearGradient id="paint2_linear_381_1368" x1="95.1801" y1="0" x2="95.1801" y2="190.36" gradientUnits="userSpaceOnUse">
     <stop stop-color="#F5F5F5"/>
     <stop offset="1" stop-color="#F5F5F5" stop-opacity="0"/>
     </linearGradient>
-    <linearGradient id="paint4_linear_381_1313" x1="1689.4" y1="-56.8931" x2="1689.4" y2="462.485" gradientUnits="userSpaceOnUse">
-    <stop stop-color="#F5F5F5"/>
-    <stop offset="1" stop-color="#F5F5F5" stop-opacity="0"/>
-    </linearGradient>
-    <linearGradient id="paint5_linear_381_1313" x1="1679.24" y1="7.35376" x2="1679.24" y2="355.956" gradientUnits="userSpaceOnUse">
-    <stop stop-color="#F5F5F5"/>
-    <stop offset="1" stop-color="#F5F5F5" stop-opacity="0"/>
-    </linearGradient>
-    <linearGradient id="paint6_linear_381_1313" x1="1669.82" y1="66.8852" x2="1669.82" y2="257.245" gradientUnits="userSpaceOnUse">
-    <stop stop-color="#F5F5F5"/>
-    <stop offset="1" stop-color="#F5F5F5" stop-opacity="0"/>
-    </linearGradient>
-    <linearGradient id="paint7_linear_381_1313" x1="259.689" y1="0" x2="259.689" y2="519.378" gradientUnits="userSpaceOnUse">
-    <stop stop-color="#F5F5F5"/>
-    <stop offset="1" stop-color="#F5F5F5" stop-opacity="0"/>
-    </linearGradient>
-    <linearGradient id="paint8_linear_381_1313" x1="174.301" y1="0" x2="174.301" y2="348.602" gradientUnits="userSpaceOnUse">
-    <stop stop-color="#F5F5F5"/>
-    <stop offset="1" stop-color="#F5F5F5" stop-opacity="0"/>
-    </linearGradient>
-    <linearGradient id="paint9_linear_381_1313" x1="95.1801" y1="0" x2="95.1801" y2="190.36" gradientUnits="userSpaceOnUse">
-    <stop stop-color="#F5F5F5"/>
-    <stop offset="1" stop-color="#F5F5F5" stop-opacity="0"/>
-    </linearGradient>
-    <linearGradient id="paint10_linear_381_1313" x1="259.689" y1="0" x2="259.689" y2="519.378" gradientUnits="userSpaceOnUse">
-    <stop stop-color="#F5F5F5"/>
-    <stop offset="1" stop-color="#F5F5F5" stop-opacity="0"/>
-    </linearGradient>
-    <linearGradient id="paint11_linear_381_1313" x1="174.301" y1="0" x2="174.301" y2="348.602" gradientUnits="userSpaceOnUse">
-    <stop stop-color="#F5F5F5"/>
-    <stop offset="1" stop-color="#F5F5F5" stop-opacity="0"/>
-    </linearGradient>
-    <linearGradient id="paint12_linear_381_1313" x1="95.1801" y1="0" x2="95.1801" y2="190.36" gradientUnits="userSpaceOnUse">
-    <stop stop-color="#F5F5F5"/>
-    <stop offset="1" stop-color="#F5F5F5" stop-opacity="0"/>
-    </linearGradient>
-    <clipPath id="clip0_381_1313">
-    <rect width="1680" height="729" fill="white"/>
-    </clipPath>
     </defs>
-    </svg>
     </svg>
   );
 }

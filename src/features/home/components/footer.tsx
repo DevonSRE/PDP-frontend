@@ -30,12 +30,14 @@ export function Footer() {
 
         {/* Main Footer Links */}
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-          {/* Logo & Description */}
           <div className="mb-6 lg:mb-0">
-            {/* Replace this with your actual logo component or image */}
             <div className="flex items-center">
-              {/* <img src="/path/to/your/logo.svg" alt="Pivotal Development Partners Logo" className="h-8" /> */}
-              <span className="text-xl font-bold text-gray-200">Logo</span>
+              {/* <span className="text-xl font-bold text-gray-200">Logo</span> */}
+                       <img
+                src="/assets/pdp_logo_container.svg"
+                alt="Logo"
+                className="h-8 w-auto"
+              />
             </div>
             <p className="mt-4 text-sm">
               © 2023 Pivotal Development Partners Limited, All Rights Reserved
@@ -56,7 +58,7 @@ export function Footer() {
 
           {/* Training Courses Links */}
           <div>
-            <h4 className="mb-4 text-sm font-semibold text-gray-300">Training Courses</h4>
+            <h4 className="mb-4 text-sm font-semibold text-gray-300 font-poppins">Training Courses</h4>
             <ul className="space-y-2 text-sm">
               <li><a href="#" className="hover:text-white">Leadership & Management</a></li>
               <li><a href="#" className="hover:text-white">Government & Policy</a></li>
@@ -68,7 +70,7 @@ export function Footer() {
 
           {/* Find Us Links */}
           <div>
-            <h4 className="mb-4 text-sm font-semibold text-gray-300">Find Us</h4>
+            <h4 className="mb-4 text-sm font-semibold text-gray-300 font-poppins">Find Us</h4>
             <ul className="space-y-2 text-sm">
               <li className="flex items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4 mr-2">

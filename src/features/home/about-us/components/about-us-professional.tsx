@@ -1,6 +1,6 @@
 import React from "react";
 import ProfessionalCard from "./professional-card";
-import { AboutMainBG } from "@/components/icon/about-main-bg";
+import { PdpLogoBg } from "@/components/icon/pdp-logo-bg";
 
  const professionals = [
     {
@@ -56,12 +56,15 @@ import { AboutMainBG } from "@/components/icon/about-main-bg";
 
   const MeetTheProfessional = () => {
     return (
-      <section className="relative w-full overflow-hidden pt-12 bg-white">
-      {/* Background SVG */}
-      <AboutMainBG className="absolute inset-0 w-full h-full object-cover z-0" />
+      <section className="relative w-full overflow-hidden py-62 bg-black">
+        <PdpLogoBg className="absolute -top-20 -left-110 w-150"/>
+           <PdpLogoBg className="absolute -top-5 -right-110 w-150"/>
+                 
 
-      <div className="container mx-auto  pt-72 relative z-10 justify-center-safe">
-        <div className="text-center text-white mb-16">
+       <PdpLogoBg className="absolute -bottom-20 -left-110 w-150 rotate-180"/>
+           <PdpLogoBg className="absolute -bottom-20 -right-110 w-150 rotate-180"/>
+      <div className="container mx-auto  relative z-10 justify-center-safe space-y-16">
+        <div className="text-center text-white">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 font-poppins">
             Meet The Professional
           </h2>
@@ -76,7 +79,7 @@ import { AboutMainBG } from "@/components/icon/about-main-bg";
         </div>
 
         {/* Professional Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8  pb-52 ">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
           {professionals.map((pro, index) => (
             <ProfessionalCard
               key={index}
