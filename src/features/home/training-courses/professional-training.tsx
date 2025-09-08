@@ -1,19 +1,17 @@
+import { TrainingFirstBg } from '@/components/icon/training-bg-first';
+import { TrainingSecondBg } from '@/components/icon/training-bg-second';
 import React from 'react';
 
 const ProfessionalTrainingHeader = () => {
   return (
-    <div className="relative bg-white py-48 overflow-hidden">
-      {/* Background shape */}
+    <div className=" relative bg-white">
+      <div className="relative bg-white p-78 overflow-hidden">
+         {/* Background shape */}
       <div className="absolute inset-0 bg-white opacity-20 transform -skew-y-3 -translate-y-1/2"></div>
 
       {/* Background image */}
-      <div className="absolute inset-0 z-0">
-        <img
-          src="https://via.placeholder.com/1600x900?text=Training+Session"
-          alt="Training Session"
-          className="w-full h-full object-cover opacity-70"
-        />
-      </div>
+      <TrainingFirstBg className='absolute bottom-0 right-0'/>
+      <TrainingSecondBg className='absolute -bottom-10 right-140'/>
 
       {/* Content */}
       <div className="relative max-w-7xl mx-auto z-10">
@@ -36,6 +34,10 @@ const ProfessionalTrainingHeader = () => {
           </div>
         </div>
       </div>
+      </div>
+     
+
+   <div className="absolute -bottom-0 h-[10px] w-full bg-gradient-to-r from-[#005A92] to-[#009981]" />
     </div>
   );
 };

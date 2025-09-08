@@ -1,6 +1,6 @@
 import React from "react";
 import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
-import { OfficeInfoBg } from "@/components/icon/office-info-bg";
+import { ContactRightBg } from "@/components/icon/contact-right-bg";
 
 export function GetContactSection() {
   return (
@@ -19,8 +19,10 @@ export function GetContactSection() {
       {/* Contact Card */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto bg-white p-2 md:p-12 rounded-2xl shadow-lg">
         {/* Left Side - Info */}
-        <div className="bg-teal-900 text-white rounded-2xl p-8 shadow-lg flex flex-col justify-between">
-          {/* <OfficeInfoBg className="absolute inset-0 w-full h-full object-cover z-0" /> */}
+        <div className="relative bg-teal-900 text-white rounded-2xl p-8 shadow-lg flex flex-col justify-between overflow-hidden">
+         
+         <ContactRightBg className="absolute -top-30 -left-30 rotate-180"/>
+         <ContactRightBg className="absolute bottom-0 right-0"/>
           <div className="flex-col justify-start">
             <h3 className="text-lg font-semibold mb-4">Office</h3>
             <p className="text-sm leading-relaxed mb-6">

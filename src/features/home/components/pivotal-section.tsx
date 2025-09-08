@@ -1,14 +1,6 @@
 'use client';
 import { GraduationIcon } from '@/components/icon/graduation-icon';
 import PivotalCard from './pivotal-card';
-import {
-  GraduationCapIcon,
-  BriefcaseBusiness,
-  CheckCircle,
-  Users,
-  GraduationCap,
-  MapPin,
-} from 'lucide-react';
 import { BadgeIcon } from '@/components/icon/badge-icon';
 import { FaqIcon } from '@/components/icon/faq-icon';
 import { PanIcon } from '@/components/icon/pan-icon';

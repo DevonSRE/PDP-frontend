@@ -44,7 +44,7 @@ const TrainingLocations = () => {
 
   return (
     
-    <div className="bg-gray-100 py-32 px-4 sm:px-6 lg:px-8 font-poppins">
+    <div className="bg-gray-100 p-32 px-4 sm:px-6 lg:px-8 font-poppins">
       <div className="max-w-7xl mx-auto">
 
         {/* Header Section */}

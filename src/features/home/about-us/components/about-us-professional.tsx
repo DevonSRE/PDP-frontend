@@ -56,7 +56,7 @@ import { PdpLogoBg } from "@/components/icon/pdp-logo-bg";
 
   const MeetTheProfessional = () => {
     return (
-      <section className="relative w-full overflow-hidden py-62 bg-black">
+      <section className="relative w-full overflow-hidden py-62 bg-black">/
         <PdpLogoBg className="absolute -top-20 -left-110 w-150"/>
            <PdpLogoBg className="absolute -top-5 -right-110 w-150"/>
                  
