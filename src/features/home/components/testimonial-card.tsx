@@ -1,7 +1,5 @@
 import React from 'react';
-// Import the SVG file. The bundler will treat this as a URL.
 import Image from 'next/image';
-import { TestimonialCardBg } from '@/components/icon/testimonial-card-icon';
 
 
 interface TestimonialCardProps {

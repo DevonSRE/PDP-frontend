@@ -4,10 +4,10 @@ import Image from "next/image";
 interface ServiceItem {
   title: string;
   description: string;
-  note?: string;      // ✅ made optional
-  subNote?: string;   // ✅ made optional
-  subNote2?: string;  // ✅ made optional
-  subNote3?: string;  // ✅ made optional
+  note?: string;      
+  subNote?: string;   
+  subNote2?: string; 
+  subNote3?: string;  
 }
 
 interface ServiceBoxProps {
@@ -25,7 +25,7 @@ const ServiceBox: React.FC<ServiceBoxProps> = ({
   imageSrc,
   title,
   titleColor = "text-gray-800",
-  dividerColor = "bg-yellow-500",
+  dividerColor,
   items,
   buttonText,
   buttonColor,

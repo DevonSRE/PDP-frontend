@@ -1,5 +1,4 @@
 import React from "react"
-import { ContactCardBg } from "@/components/icon/contact-card-bg"
 
 export function ContactSection() {
   return (
