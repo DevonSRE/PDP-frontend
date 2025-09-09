@@ -32,9 +32,9 @@ const ProfessionalCard: React.FC<ProfessionalCardProps> = ({
 
         {/* Social Links */}
         <div className="flex justify-center space-x-4">
-          <Facebook />
-          <Twitter />
-          <Linkedin />
+          <Facebook fill="white" stroke="white" />
+          <Twitter fill="white" stroke="white" />
+          <Linkedin fill="white" stroke="white" />
         </div>
       </div>
     </div>

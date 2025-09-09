@@ -1,6 +1,8 @@
-import React from "react"
-import Image from "next/image"
-import { HeroBg } from "@/components/icon/hero-icon"
+import React from "react";
+import Image from "next/image";
+import { HeroBg } from "@/components/icon/hero-icon";
+import { CalendarRange } from "lucide-react";
+import { GraduationIcon } from "@/components/icon/graduation-icon";
 
 export function HeroSection() {
   return (
@@ -11,24 +13,30 @@ export function HeroSection() {
       {/* Content sits on top */}
       <div className="relative z-10 max-w-5xl mx-auto text-center px-4 md:px-8 pt-20 md:pt-20">
         {/* Badge */}
-        <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-gray-100 text-sm font-medium mb-6">
-          <span className="text-yellow-800">🆕</span>
-          <span>2025 Course Schedule now available.</span>
+        <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-gray-100 text-sm font-medium mb-6 border-2 border-black/30">
+          <span className="text-yellow-800 bg-white py-2 px-4 rounded-full"> New </span>
+          <span className="text-black font-light font-sm">2025 Course Schedule now available.</span>
           <a href="#" className="underline font-semibold">
             View Schedule →
           </a>
         </div>
 
-        {/* Main Heading */}
-        <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-6 font-poppins pt-12">
-          Delivering{" "}
-          <span className="text-yellow-500">Cost-Effective</span> and Flexible{" "}
-          <span className="relative text-teal-600 bg-white shadow-sm px-2 py-1 rounded pt-2">
-            Training Solutions
-            {/* Gradient border line */}
-            <span className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-b from-white via-green-500 to-yellow-500 rounded-b"></span>
-          </span>
-        </h1>
+        {/* Main Heading  */}
+        <div className="flex flex-col items-center justify-center space-y-6 lg:space-y-8 p-4">
+          {/* First line of text */}
+          <h1 className="text-black text-4xl sm:text-5xl lg:text-6xl font-extrabold text-center">
+            Delivering <span className="text-[#E4B800]">Cost-Effective</span>{" "}
+            and
+          </h1>
+
+          {/* Second line of text in a bordered box */}
+          <div className="flex items-center justify-center border border-gray-300 rounded-full px-8 py-4 bg-white/50 backdrop-blur-sm shadow-md">
+            <h2 className="text-black text-4xl sm:text-5xl lg:text-6xl font-extrabold text-center">
+              Flexible{" "}
+              <span className="text-[#026757]">Training Solutions</span>
+            </h2>
+          </div>
+        </div>
 
         {/* Subtext */}
         <p className="text-gray-600 max-w-3xl mx-auto mb-10 font-poppins">
@@ -41,14 +49,16 @@ export function HeroSection() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
           <a
             href="#"
-            className="px-6 py-3 bg-teal-700 font-poppins text-white rounded-full font-medium shadow-md hover:bg-teal-800 transition-colors"
+            className=" px-6 py-3 bg-teal-700 font-poppins text-white rounded-full font-medium shadow-md hover:bg-teal-800 transition-colors  flex items-center gap-2"
           >
+            <GraduationIcon/>
             Book Training Now
           </a>
           <a
             href="#"
-            className="px-6 py-3 border-2 border-teal-700 text-teal-700 font-poppins rounded-full font-medium hover:bg-teal-50 transition-colors"
+            className="px-6 py-3 border-2 border-teal-700 text-teal-700 bg-white font-poppins rounded-full font-medium hover:bg-teal-50 transition-colors  flex items-center gap-2"
           >
+            <CalendarRange/>
             View 2025 Course Schedule
           </a>
         </div>
@@ -68,5 +78,5 @@ export function HeroSection() {
         <div className="absolute bottom-0 left-0 w-full h-40 bg-yellow-500 rounded-t-xl opacity-80"></div>
       </div>
     </section>
-  )
+  );
 }

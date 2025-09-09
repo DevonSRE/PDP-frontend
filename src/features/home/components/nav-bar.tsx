@@ -1,6 +1,10 @@
-"use client";
+'use client';
+
 import React, { useState } from "react";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
+import Link from 'next/link'; // Use next/link for client-side navigation
+import { usePathname } from 'next/navigation';
 
 interface NavLink {
   name: string;
@@ -18,15 +22,18 @@ const navLinks: NavLink[] = [
 
 export function NavBar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-gradient-to-b from-[#009782]/50 from-10% to-white to-30% backdrop-blur-sm">
       <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center space-x-2">
-          <img
+          <Image
             src="/assets/pdp_logo_container.svg"
             alt="Logo"
+            width={32} // Set the width in pixels
+            height={32} // Set the height in pixels
             className="h-8 w-auto"
           />
         </div>
@@ -36,12 +43,14 @@ export function NavBar() {
           <ul className="flex items-center space-x-4 p-4 bg-[#064C3C] rounded-full border-2 border-white shadow-sm">
             {navLinks.map((link) => (
               <li key={link.name}>
-                <a
+                <Link
                   href={link.href}
-                  className="px-4 py-2 text-white font-medium hover:text-teal-300 transition-colors duration-200 font-bai-jamjuree"
+                  className={`px-4 py-2 font-medium transition-colors duration-200 font-bai-jamjuree ${
+                    pathname === link.href ? 'text-white' : 'text-gray-300 hover:text-teal-300'
+                  }`}
                 >
                   {link.name}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -72,13 +81,17 @@ export function NavBar() {
           <ul className="flex flex-col items-start space-y-2 p-4">
             {navLinks.map((link) => (
               <li key={link.name} className="w-full">
-                <a
+                <Link
                   href={link.href}
-                  className="block w-full px-4 py-2 text-black font-medium rounded-md hover:bg-gray-100 font-bai-jamjuree"
+                  className={`block w-full px-4 py-2 font-medium rounded-md font-bai-jamjuree ${
+                    pathname === link.href
+                      ? 'bg-gray-200 text-black font-semibold'
+                      : 'text-black hover:bg-gray-100'
+                  }`}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.name}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
