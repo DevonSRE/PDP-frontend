@@ -34,8 +34,10 @@ export function Footer() {
           <div className="mb-6 lg:mb-0">
             <div className="flex items-center">
             <Image
-                src="/assets/pdp_logo_container.svg"
+                src="/assets/logo-text.svg"
                 alt="Logo"
+                 width={32}
+                  height={32} 
                 className="h-8 w-auto"
               />
             </div>

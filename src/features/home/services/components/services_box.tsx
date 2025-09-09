@@ -25,7 +25,7 @@ const ServiceBox: React.FC<ServiceBoxProps> = ({
   imageSrc,
   title,
   titleColor = "text-gray-800",
-  dividerColor,
+  // dividerColor,
   items,
   buttonText,
   buttonColor,

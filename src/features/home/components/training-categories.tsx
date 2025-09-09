@@ -57,12 +57,21 @@ const TrainingCategories: React.FC = () => {
 
         {/* Section with the Image and Gradient Border */}
         <div className="mt-16 mx-auto w-full max-w-4xl rounded-3xl border-4 border-black">
-          <div className="rounded-[calc(1.5rem-1px)]">
+          {/* <div className="rounded-[calc(1.5rem-1px)]">
             <Image
               src="/assets/curated_image.svg" alt="Curated image"
               className="w-full rounded-[calc(1.5rem-1px)] object-cover"
             />
-          </div>
+          </div> */}
+          <div className="rounded-[calc(1.5rem-1px)]">
+        <Image
+          src="/assets/curated_image.svg"
+          alt="Curated image"
+          width={1000} // Example width in pixels
+          height={500} // Example height in pixels
+          className="w-full rounded-[calc(1.5rem-1px)] object-cover"
+        />
+      </div>
         </div>
       </div>
     </div>
