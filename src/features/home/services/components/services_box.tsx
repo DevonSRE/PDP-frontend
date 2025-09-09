@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 interface ServiceItem {
   title: string;
@@ -34,7 +35,7 @@ const ServiceBox: React.FC<ServiceBoxProps> = ({
     <div className="flex flex-col md:flex-row rounded-lg bg-white overflow-hidden shadow-sm my-8 p-4">
       {/* Image Section */}
       <div className="md:w-1/2 w-full flex-shrink-0">
-        <img
+        <Image
           src={imageSrc}
           alt={title}
           className="w-full h-full object-cover"

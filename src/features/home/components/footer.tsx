@@ -1,5 +1,6 @@
 import { FacebookIcon, InstagramIcon, LinkedinIcon, TwitterIcon } from 'lucide-react';
 import React from 'react';
+import Image from 'next/image';
 
 export function Footer() {
   return (
@@ -32,7 +33,7 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div className="mb-6 lg:mb-0">
             <div className="flex items-center">
-            <img
+            <Image
                 src="/assets/pdp_logo_container.svg"
                 alt="Logo"
                 className="h-8 w-auto"

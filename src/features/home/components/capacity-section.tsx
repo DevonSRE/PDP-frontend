@@ -1,4 +1,4 @@
-import { CheckCircle, Circle, Dot } from "lucide-react";
+import { Dot } from "lucide-react";
 import Image from "next/image";
 
 export function CapacitySection() {
@@ -47,8 +47,6 @@ export function CapacitySection() {
                 text: "Our study tours and learning exchanges are structured to promote best-practice sharing and innovation from leading institutions globally.",
               },
             ].map((item, index) => (
-                // eslint-disable-next-line react/jsx-key
-          
               <li key={index} className="flex items-start gap-2">
                 <Dot className="text-black w-5 h-5 mt-1 flex-shrink-0" />
                 <span>

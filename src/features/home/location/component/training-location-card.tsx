@@ -1,6 +1,6 @@
 import { CalendarRange, MapPin } from 'lucide-react';
 import React from 'react';
-
+import Image from 'next/image';
 interface TrainingLocationCardProps {
   imageSrc: string;
   locationName: string;
@@ -16,7 +16,7 @@ const TrainingLocationCard: React.FC<TrainingLocationCardProps> = ({
 }) => {
   return (
     <div className=" bg-white overflow-hidden">
-      <img src={imageSrc} alt={locationName} className="w-full h-48 object-cover " />
+      <Image src={imageSrc} alt={locationName} className="w-full h-48 object-cover " />
       <div className="flex p-8 flex-col h-full">
       <div className='flex flex-row justify-items-center gap-2'>
           <MapPin className="w-5 h-5 text-black " />
