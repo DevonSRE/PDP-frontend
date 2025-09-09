@@ -1,0 +1,21 @@
+import { cn } from "@/lib/utils"
+
+export function TestimonialCardBg({ className, ...props}: React.ComponentProps<"svg">){
+    return (
+
+<svg width="374" height="249" viewBox="0 0 374 249" fill="none" xmlns="http://www.w3.org/2000/svg" className={cn(className)} {...props}> 
+<g clip-path="url(#clip0_366_4345)">
+<rect width="374" height="248.494" rx="10" fill="white"/>
+<circle cx="419" cy="16" r="132" fill="#FFF5C9"/>
+<circle cx="438" cy="16" r="132" fill="white"/>
+<circle cx="466" cy="43" r="132" fill="#FFF5C9"/>
+</g>
+<defs>
+<clipPath id="clip0_366_4345">
+<rect width="374" height="248.494" rx="10" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+
+)
+}
