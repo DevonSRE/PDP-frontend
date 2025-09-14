@@ -1,40 +1,65 @@
 import React from "react";
 import Image from "next/image";
-import { HeroBg } from "@/components/icon/hero-icon";
-import { CalendarRange } from "lucide-react";
+import { HeroBg } from "@/components/icon/hero-bg";
+import { CalendarRange, ChevronRight } from "lucide-react";
 import { GraduationIcon } from "@/components/icon/graduation-icon";
+import { cn } from "@/lib/utils";
+import Link from "next/link";
+import { buttonVariants } from "@/components/ui/button";
 
 export function HeroSection() {
   return (
-    <section className="relative w-full overflow-hidden pt-12 bg-white">
+    <section
+      className={cn(
+        "relative h-dvh w-full overflow-hidden pt-12 bg-white",
+        "flex items-center justify-center",
+      )}
+    >
       {/* Background SVG */}
-      <HeroBg className="absolute inset-0 w-full h-full object-cover z-0" />
+      <HeroBg className="h-full absolute inset-0 min-h-dvh object-cover z-0 top-0 left-0 right-0 bottom-0" />
 
       {/* Content sits on top */}
-      <div className="relative z-10 max-w-5xl mx-auto text-center px-4 md:px-8 pt-20 md:pt-20">
+      <div className="relative z-10 -translate-y-14 max-w-5xl mx-auto text-center px-4 md:px-8">
         {/* Badge */}
-        <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-gray-100 text-sm font-medium mb-6 border-2 border-black/30">
-          <span className="text-yellow-800 bg-white py-2 px-4 rounded-full"> New </span>
-          <span className="text-black font-light font-sm">2025 Course Schedule now available.</span>
-          <a href="#" className="underline font-semibold">
-            View Schedule →
-          </a>
+        <div
+          className={cn(
+            "text-sm font-medium",
+            "inline-flex items-center gap-2 ",
+            "px-2 py-2 rounded-[20px] bg-gray-100 mb-6 border-2 border-stone-300/30",
+          )}
+        >
+          <p className="text-xs text-yellow-800 bg-white py-1.5 px-4 rounded-full space-x-2 border border-input">
+            <span>New</span>
+            <span>🥳</span>
+          </p>
+          <span className="font-light">
+            2025 Course Schedule now available,
+          </span>
+          <Link
+            href="#"
+            className="underline font-medium flex items-center gap-1"
+          >
+            View Schedule
+            <ChevronRight size={14} />
+          </Link>
         </div>
 
         {/* Main Heading  */}
-        <div className="flex flex-col items-center justify-center space-y-6 lg:space-y-8 p-4">
+        <div className="flex flex-col items-center justify-center space-y-1 lg:space-y-2 p-4">
           {/* First line of text */}
-          <h1 className="text-black text-4xl sm:text-5xl lg:text-6xl font-extrabold text-center">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-center">
             Delivering <span className="text-[#E4B800]">Cost-Effective</span>{" "}
             and
           </h1>
 
           {/* Second line of text in a bordered box */}
-          <div className="flex items-center justify-center border border-gray-300 rounded-full px-8 py-4 bg-white/50 backdrop-blur-sm shadow-md">
-            <h2 className="text-black text-4xl sm:text-5xl lg:text-6xl font-extrabold text-center">
-              Flexible{" "}
-              <span className="text-[#026757]">Training Solutions</span>
-            </h2>
+          <div className="rounded-3xl p-px bg-linear-[to_right,white_10%,green_25%,white_50%,green_85%,var(--brand-yellow-extradark)_100%)] overflow-hidden">
+            <div className="bg-white px-6 py-2.5 backdrop-blur-sm rounded-3xl">
+              <h2 className="text-black text-3xl sm:text-4xl lg:text-5xl font-semibold text-center">
+                Flexible{" "}
+                <span className="text-[#026757]">Training Solutions</span>
+              </h2>
+            </div>
           </div>
         </div>
 
@@ -47,35 +72,44 @@ export function HeroSection() {
 
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-          <a
+          <Link
             href="#"
-            className=" px-6 py-3 bg-teal-700 font-poppins text-white rounded-full font-medium shadow-md hover:bg-teal-800 transition-colors  flex items-center gap-2"
+            className={cn(
+              buttonVariants(),
+              "!px-8 py-7 bg-brand-green-light rounded-2xl shadow-md hover:bg-teal-800",
+            )}
           >
-            <GraduationIcon/>
+            <GraduationIcon />
             Book Training Now
-          </a>
-          <a
+          </Link>
+          <Link
             href="#"
-            className="px-6 py-3 border-2 border-teal-700 text-teal-700 bg-white font-poppins rounded-full font-medium hover:bg-teal-50 transition-colors  flex items-center gap-2"
+            className={cn(
+              buttonVariants({ variant: "outline" }),
+              "!px-8 py-7 ring-2 border-none text-brand-green-light rounded-2xl font-medium hover:bg-teal-50 transition-colors  flex items-center gap-2",
+            )}
           >
-            <CalendarRange/>
+            <CalendarRange />
             View 2025 Course Schedule
-          </a>
+          </Link>
         </div>
       </div>
 
       {/* Foreground image + overlay */}
-      <div className="relative flex justify-start z-10">
+      <div
+        className={cn(
+          "absolute left-0 -bottom-40 flex justify-start z-10 w-full",
+          "after:absolute after:bottom-40 after:rounded-t-2xl after:border-t-8 after:border-x-8 after:border-brand-yellow-extradark",
+          "after:w-full after:h-24 after:bg-brand-yellow-dark after:z-0",
+        )}
+      >
         <Image
           src="/assets/hero_image.svg"
           alt="Training session"
-          className="max-w-6xl w-full object-contain"
+          className="w-fit object-contain z-10"
           width={800}
           height={400}
         />
-
-        {/* Yellow overlay */}
-        <div className="absolute bottom-0 left-0 w-full h-40 bg-yellow-500 rounded-t-xl opacity-80"></div>
       </div>
     </section>
   );

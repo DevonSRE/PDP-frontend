@@ -1,43 +1,68 @@
+import { cn } from "@/lib/utils";
+import { Fragment } from "react";
+
 export function HomePageStat() {
   return (
-    <div className="bg-[#E8E8E8] p-12 font-poppins">
-              {/* Top Stats Section */}
-      <section className="max-w-7xl mx-auto mt-10">
-        <div className="bg-[#064C3C] text-white rounded-2xl p-4 shadow-lg">
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-8 items-center">
-            {/* Left Content */}
-            <div className="md:col-span-1 border-2 border-white p-4 rounded-lg">
-              <h2 className="text-sm font-semibold uppercase">#1</h2>
-              <h1 className="text-xl md:text-2xl font-bold mt-2 leading-snug">
-                Leading Capacity <br /> Development Partner in Africa
-              </h1>
-              <p className="text-gray-200 mt-2 text-sm">
-                We don’t just talk capacity — we deliver results.
-              </p>
+    <div className="">
+      {/* Top Stats Section */}
+      <div
+        className={cn(
+          "max-w-7xl mx-auto",
+          "bg-brand-green-light text-white rounded-2xl p-4 shadow-lg",
+          "flex items-center",
+        )}
+      >
+        {/* Left Content */}
+        <div
+          className={cn(
+            "bg-linear-to-b from-brand-green-light/5 to-white",
+            "w-80 p-[1.5px] rounded-lg overflow-hidden",
+          )}
+        >
+          <div className="w-full h-full bg-brand-green-light rounded-lg">
+            <div
+              className={cn(
+                "w-full h-full flex flex-col items-start gap-3 rounded-lg p-5 bg-white/10",
+              )}
+            >
+              <h2 className="text-xl md:text-2xl font-semibold">#1</h2>
+              <h3 className="flex flex-col gap-2">
+                <p className="text-sm md:text-base font-bold mt-2 leading-snug">
+                  Leading Capacity <br /> Development Partner in Africa
+                </p>
+                <p className="text-gray-200 text-sm md:text-base">
+                  We don’t just talk capacity — we deliver results.
+                </p>
+              </h3>
             </div>
-
-            {/* Stats */}
-            <div className="md:col-span-4 grid grid-cols-2 md:grid-cols-4 text-center items-start font-poppins divide-x divide-[0.5px]">
-            <div className="px-4">
-              <p className="text-3xl font-bold">15+</p>
-              <p className="text-sm text-white">Government Partners</p>
-            </div>
-            <div className="px-4">
-              <p className="text-3xl font-bold">8.0+</p>
-              <p className="text-sm text-white">Countries Reached</p>
-            </div>
-            <div className="px-4">
-              <p className="text-3xl font-bold">100+</p>
-              <p className="text-sm text-white">Professional Courses</p>
-            </div>
-            <div className="px-4">
-              <p className="text-3xl font-bold">5K+</p>
-              <p className="text-sm text-white">Trained Professionals</p>
-            </div>
-          </div>
           </div>
         </div>
-      </section>
+
+        {/* Stats */}
+        <div className="flex-1 flex items-center justify-evenly">
+          {stats.map((stat, idx) => {
+            return (
+              <Fragment key={stat.id}>
+                <div className="max-w-28 flex flex-col items-start text-start">
+                  <p className="text-5xl font-semibold">{stat.value}+</p>
+                  <p className="text-sm text-white">{stat.description}</p>
+                </div>
+                {idx < stats.length - 1 && (
+                  <div className="h-5 w-px bg-white/20" />
+                )}
+              </Fragment>
+            );
+          })}
+        </div>
+      </div>
     </div>
   );
 }
+
+const stats = [
+  { id: 1, value: "15", description: "Government Partners" },
+  { id: 2, value: "8.0", description: "Countries Reached" },
+  { id: 3, value: "100", description: "Professional Courses" },
+  { id: 4, value: "5K", description: "Trained Professionals" },
+];
+

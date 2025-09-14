@@ -1,22 +1,52 @@
+import { ApproachIcon } from "@/components/icon/approach-icon";
+import { KeyFocusAreaIcon } from "@/components/icon/key-focus-icon";
+import { cn } from "@/lib/utils";
 import { Dot } from "lucide-react";
 import Image from "next/image";
 
 export function CapacitySection() {
   return (
-    <div className="bg-[#E8E8E8] font-poppins py-12">
-      <section className="max-w-7xl mx-auto bg-white shadow-lg rounded-2xl p-24 grid md:grid-cols-2 gap-12">
-        
+    <div
+      className={cn(
+        "w-full mx-auto bg-white rounded-2xl",
+        "p-[3px] bg-linear-to-b from-tranparent from-0% via-neutral-400/30 via-50% to-transparent to-100%",
+      )}
+    >
+      <div
+        className={cn(
+          "flex gap-14",
+          "w-full bg-white",
+          "px-24 py-40 rounded-lg",
+        )}
+      >
         {/* What We Do */}
-        <div>
-          <h3 className="text-yellow-500 font-bold text-lg mb-3">What We Do</h3>
-          <p className="text-gray-600 mb-6 text-sm leading-relaxed">
-            We specialize in strengthening institutions and individuals through
-            practical, context-specific training programs that deliver measurable
-            results.
-          </p>
+        <div className="flex flex-col gap-8">
+          <div className="flex gap-7">
+            <div className="w-1.5 min-h-full bg-linear-to-b from-10% from-transparent to-brand-yellow-dark" />
+            <div className="flex flex-col gap-4">
+              <div
+                className={cn(
+                  "rounded-md bg-brand-yellow-dark/5",
+                  "w-14 h-14",
+                  "grid place-content-center",
+                )}
+              >
+                <ApproachIcon />
+              </div>
+              <h3 className="text-brand-yellow-dark font-bold text-lg">
+                What We Do
+              </h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                We specialize in strengthening institutions and individuals
+                through practical, context-specific training programs that
+                deliver measurable results.
+              </p>
+            </div>
+          </div>
+
           <div className="rounded-xl overflow-hidden shadow-md">
             <Image
-              src="/assets/why.svg"  
+              src="/assets/why.svg"
               alt="Training session"
               width={600}
               height={600}
@@ -26,38 +56,57 @@ export function CapacitySection() {
         </div>
 
         {/* Key Focus Area */}
-        <div>
-          <h3 className="text-green-700 font-bold text-lg mb-4">Key Focus Area</h3>
-          <ul className="space-y-4 text-gray-700 text-sm leading-relaxed">
-            {[
-              {
-                title: "Customised Training",
-                text: "We deliver training that is designed from the ground up, based on a comprehensive assessment of your team’s needs and institutional challenges.",
-              },
-              {
-                title: "Institutional Strengthening",
-                text: "We support the development of sustainable internal systems, tools, and processes that enhance performance and public service delivery.",
-              },
-              {
-                title: "Public Procurement & Compliance",
-                text: "Our team delivers specialised BPP-certified training aligned with the Public Procurement Act to ensure robust governance and compliance.",
-              },
-              {
-                title: "International Exposure",
-                text: "Our study tours and learning exchanges are structured to promote best-practice sharing and innovation from leading institutions globally.",
-              },
-            ].map((item, index) => (
-              <li key={index} className="flex items-start gap-2">
-                <Dot className="text-black w-5 h-5 mt-1 flex-shrink-0" />
-                <span>
-                  <strong>{item.title}:</strong> {item.text}
-                </span>
-              </li>
-        
-            ))}
-          </ul>
+        <div className="flex gap-7 min-h-full max-w-xl">
+          <div className="w-1.5 min-h-full bg-linear-to-b from-10% from-transparent to-brand-green-extralight" />
+
+          <div className="flex flex-col gap-4 text-brand-green-extralight">
+            <div
+              className={cn(
+                "rounded-md bg-green-600/5",
+                "w-14 h-14",
+                "grid place-content-center",
+              )}
+            >
+              <KeyFocusAreaIcon />
+            </div>
+            <h3 className="text-brand-green-extralight font-bold text-lg mb-4">
+              Key Focus Area
+            </h3>
+            <ul className="space-y-4 text-gray-700 text-sm leading-relaxed">
+              {focusAreas.map((item) => (
+                <li key={item.id} className="flex items-start gap-2">
+                  <Dot className="text-black w-5 h-5 mt-1 flex-shrink-0" />
+                  <span>
+                    <strong>{item.title}:</strong> {item.text}
+                  </span>
+                </li>
+              ))}
+            </ul>
           </div>
-      </section>
+        </div>
+      </div>
     </div>
   );
 }
+const focusAreas = [
+  {
+    id: 1,
+    title: "Customised Training",
+    text: "We deliver training that is designed from the ground up, based on a comprehensive assessment of your team’s needs and institutional challenges.",
+  },
+  {
+    id: 2,
+    title: "Institutional Strengthening",
+    text: "We support the development of sustainable internal systems, tools, and processes that enhance performance and public service delivery.",
+  },
+  {
+    id: 3,
+    title: "Public Procurement & Compliance",
+    text: "Our team delivers specialised BPP-certified training aligned with the Public Procurement Act to ensure robust governance and compliance.",
+  },
+  {
+    id: 4,
+    title: "International Exposure",
+    text: "Our study tours and learning exchanges are structured to promote best-practice sharing and innovation from leading institutions globally.",
+  },
+];

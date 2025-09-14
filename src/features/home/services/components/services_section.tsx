@@ -1,99 +1,110 @@
-import React from 'react';
-import ServiceBox from './services_box';
+"use client";
 
-const OurServicesSection = () => {
+import React from "react";
+import { ServiceBox } from "./services_box";
+import { TService } from "../../lib/types";
+
+export function OurServicesSection() {
   return (
-    <div className="bg-gray-100 py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-      
-
-        {/* Training Solutions Section */}
-        <ServiceBox
-          imageSrc='/assets/s1.svg'
-          title="Training Solutions"
-          titleColor='text-[#009981]'
-          items={[
-            {
-              title: 'Professional Development Programs',
-              description:
-                'Build capacity in leadership, communication, and strategic planning tailored to the African context.',
-            },
-            {
-              title: 'Government System Strengthening',
-              description:
-                'Enhance public service delivery through transparency and accountability-based training solutions.',
-            },
-            {
-              title: 'Third-Party Monitoring',
-              description:
-                'Ensure transparency and impact through independent project assessments and evaluations.',
-            },
-             {
-              title: 'Quality Assurance Training',
-              description:
-                'Learn best practices in quality control, compliance, and performance standardization.',
-            },
-          ]}
-          buttonText="View Training Solutions"
-          buttonColor="bg-[#009981]"
-          buttonHoverColor="hover:bg-[#009981]/50"
-        />
-
-        {/* Consulting Services Section */}
-        <ServiceBox
-          imageSrc='/assets/s2.svg'
-          title="Consultancy Solutions"
-          titleColor='text-[#E4B800]'
-          items={[
-            {
-              title: 'Skills-Gap Analysis',
-              description:
-                'Identify organizational performance gaps and receive tailored development interventions.',
-            },
-            {
-              title: 'Competency Frameworks',
-              description:
-                'Design structured models for hiring, training, and performance improvement.',
-            },
-            {
-              title: 'Training of Trainers (ToT)',
-              description:
-                'Train your internal facilitators with proven methods and quality assurance practices.',
-            },
-             {
-              title: 'Coaching & Mentoring',
-              description:
-                'Leadership development programs to empower individuals and improve organizational outcomes.',
-            },
-          ]}
-          buttonText="View Our Services"
-          buttonColor="bg-[#E4B800]"
-          buttonHoverColor="hover:bg-yellow-600"
-        />
-
-        {/* Other Programs Section */}
-        <ServiceBox
-          imageSrc='/assets/s3.svg'
-          title="Other Programs"
-          titleColor='text-[#005A92]'
-          items={[
-            {
-              title: 'Project Management',
-              description:
-                'Our project management courses equip you with the skills to lead successful projects from start to finish.',
-                note: 'specialized programs covering Framework Agreements, Health Commodities, Works Procurement, and more.',
-                subNote: 'Procurement Audits & Monitoring',
-                subNote2: 'e-Government Procurement Systems',
-                subNote3: 'Information Management for Procurement',
-            },
-          ]}
-          buttonText="View Other Programs"
-          buttonColor="bg-[#005A92]"
-          buttonHoverColor="hover:bg-blue-600"
-        />
+    <section className="bg-gray-100 py-32 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-full md:max-w-6xl mx-auto flex flex-col gap-16">
+        {services.map((service) => (
+          <ServiceBox key={service.id} {...service} />
+        ))}
       </div>
-    </div>
+    </section>
   );
-};
-
-export default OurServicesSection;
+}
+const services: TService[] = [
+  {
+    id: 1,
+    img: "/assets/s1.svg",
+    title: "Core Training Solutions",
+    offers: [
+      {
+        id: 1,
+        title: "Professional Development Programs",
+        description:
+          "Build capacity in leadership, communication, and strategic planning tailored to the African context.",
+      },
+      {
+        id: 2,
+        title: "Government System Strengthening",
+        description:
+          "Enhance public service delivery through transparency and accountability-based training solutions.",
+      },
+      {
+        id: 3,
+        title: "Third-Party Monitoring",
+        description:
+          "Ensure transparency and impact through independent project assessments and evaluations.",
+      },
+      {
+        id: 4,
+        title: "Quality Assurance Training",
+        description:
+          "Learn best practices in quality control, compliance, and performance standardization.",
+      },
+    ],
+    actionText: "Get informed on new/upcoming courses",
+    buttonAction: () => {},
+    themeColor: "green",
+  },
+  {
+    id: 2,
+    img: "/assets/s2.svg",
+    title: "Consultancy Services",
+    offers: [
+      {
+        id: 1,
+        title: "Skills-Gap Analysis",
+        description:
+          "Identify organizational performance gaps and receive tailored development interventions.",
+      },
+      {
+        id: 2,
+        title: "Competency Frameworks",
+        description:
+          "Design structured models for hiring, training, and performance improvement.",
+      },
+      {
+        id: 3,
+        title: "Training of Trainers (ToT)",
+        description:
+          "Train your internal facilitators with proven methods and quality assurance practices.",
+      },
+      {
+        id: 4,
+        title: "Coaching & Mentoring",
+        description:
+          "Leadership development programs to empower individuals and improve organizational outcomes.",
+      },
+    ],
+    actionText: "Request Consultancy",
+    buttonAction: () => {},
+    themeColor: "yellow",
+  },
+  {
+    id: 3,
+    img: "/assets/s3.svg",
+    title: "BPP Training Programs",
+    offers: [
+      {
+        id: 1,
+        title: "Align with Nigeria's Public Procurement Framework",
+        bulletPoints: {
+          title:
+            "Specialized programs covering Framwork Agreements, Health Commodities, Works Procurement, and more.",
+          points: [
+            "Procurement Audits & Monitoring",
+            "e-Government Procurement Systems",
+            "Information Management for Procurement",
+          ],
+        },
+      },
+    ],
+    actionText: "Download Guide Document",
+    buttonAction: () => {},
+    themeColor: "blue",
+  },
+];

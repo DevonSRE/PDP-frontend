@@ -1,6 +1,6 @@
-import { CalendarRange, MapPin } from 'lucide-react';
-import React from 'react';
-import Image from 'next/image';
+import { CalendarRange, MapPin } from "lucide-react";
+import React from "react";
+import Image from "next/image";
 interface TrainingLocationCardProps {
   imageSrc: string;
   locationName: string;
@@ -8,32 +8,41 @@ interface TrainingLocationCardProps {
   description: string;
 }
 
-const TrainingLocationCard: React.FC<TrainingLocationCardProps> = ({
+export function TrainingLocationCard({
   imageSrc,
   locationName,
   date,
   description,
-}) => {
+}: TrainingLocationCardProps) {
   return (
     <div className=" bg-white overflow-hidden">
-      <Image src={imageSrc} alt={locationName} className="w-full h-48 object-cover " />
+      <Image
+        src={imageSrc}
+        alt={locationName}
+        width={200}
+        height={200}
+        className="w-full h-48 object-cover "
+      />
       <div className="flex p-8 flex-col h-full">
-      <div className='flex flex-row justify-items-center gap-2'>
+        <div className="flex flex-row justify-items-center gap-2">
           <MapPin className="w-5 h-5 text-black " />
-          <h3 className="text-xl font-semibold text-black font-poppins mb-2">{locationName}</h3>
-      </div>
-      <div className='flex flex-row justify-items-center gap-2'>
+          <h3 className="text-xl font-semibold text-black font-poppins mb-2">
+            {locationName}
+          </h3>
+        </div>
+        <div className="flex flex-row justify-items-center gap-2">
           <CalendarRange className="w-5 h-5 text-black" />
           <p className="text-sm text-black mb-4 font-poppins">{date}</p>
-      </div>
-       
-        <p className="text-black font-light text-sm mb-6 font-poppins">{description}</p>
+        </div>
+
+        <p className="text-black font-light text-sm mb-6 font-poppins">
+          {description}
+        </p>
         <button className="w-full bg-teal-500 text-white py-2 px-4 rounded-md hover:bg-teal-600 transition-colors duration-300">
           View Details
         </button>
       </div>
     </div>
   );
-};
+}
 
-export default TrainingLocationCard;
