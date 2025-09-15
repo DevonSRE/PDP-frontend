@@ -1,27 +1,34 @@
 import React from "react";
-import { TrainingLocationCard } from "./training-location-card";
+import {
+  Card,
+  CardAction,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { CalendarDaysIcon, MapPinnedIcon } from "lucide-react";
 
 export function TrainingLocations() {
   return (
-    <div className="bg-gray-100 p-32 px-4 sm:px-6 lg:px-8 font-poppins">
-      <div className="max-w-7xl mx-auto">
+    <div className="bg-neutral-100 p-28 px-7 md:px-10">
+      <div className="max-w-7xl mx-auto flex flex-col gap-12 w-full">
         {/* Header Section */}
-        <div className="text-center mb-12">
-          <div className="mt-8">
-            <h3 className="text-2xl font-semibold text-black font-poppins">
-              Where We Train
-            </h3>
-            <p className="mt-2 text-md text-black text-sm max-w-2xl mx-auto">
-              We conduct in-person training sessions at strategically selected
-              locations to serve professionals across multiple regions. Each
-              venue is carefully chosen for accessibility, facilities, and local
-              relevance to our course content.
-            </p>
-          </div>
+        <div className="text-center flex flex-col gap-4 w-full">
+          <h3 className="text-lg md:text-2xl font-semibold">Where We Train</h3>
+          <p className="text-xs md:text-sm max-w-full md:max-w-2xl w-full mx-auto font-light">
+            We conduct in-person training sessions at strategically selected
+            locations to serve professionals across multiple regions. Each venue
+            is carefully chosen for accessibility, facilities, and local
+            relevance to our course content.
+          </p>
         </div>
 
         {/* Training Locations Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="flex flex-wrap justify-center gap-10">
           {locations.map((location, index) => (
             <TrainingLocationCard
               key={index}
@@ -29,6 +36,7 @@ export function TrainingLocations() {
               locationName={location.locationName}
               date={location.date}
               description={location.description}
+              location={location.location}
             />
           ))}
         </div>
@@ -40,45 +48,97 @@ export function TrainingLocations() {
 const locations = [
   {
     imageSrc: "/assets/location.svg",
-    locationName: "Freetown, GreatBridge",
+    locationName: "Tashkent, Uzbekistan",
     date: "May & September 2025",
+    location: "International Hotel, Tashkent",
     description:
-      "Our intensive four-month program is structured to equip participants with essential skills and knowledge.",
+      "Our Central Asia location serves professionals from former Soviets republics with tailored governance programs.",
   },
   {
     imageSrc: "/assets/location2.svg",
     locationName: "Kigali, Rwanda",
     date: "March & October 2025",
+    location: "Kigali Convention Center",
     description:
-      "Our four-month program for Digital Transformation is designed for individuals seeking to lead digital initiatives.",
+      "Our flagship location features state-of-the-art training facilities in Nigeria's capital city, ideal for government and private sector participants.",
   },
   {
     imageSrc: "/assets/location.svg",
     locationName: "Accra, Ghana",
     date: "June & November 2025",
+    location: "Kempinski Hotel Gold Coast City",
     description:
-      "Our Smart Governance (ICT) program is tailored to enhance skills in leveraging technology for effective public administration.",
+      "Our West African hub offers premium training facilities with easy access from across the ECOWAS region.",
   },
   {
     imageSrc: "/assets/location.svg",
     locationName: "Lagos, Nigeria",
     date: "June & November 2025",
+    location: "Victoria Island",
     description:
-      "Our intensive four-month program is structured to equip participants with essential skills and knowledge.",
+      "The vibrant location offers modern amenities and access to key financial districts, making it perfect for corporate training sessions.",
   },
   {
     imageSrc: "/assets/location.svg",
-    locationName: "Owerri, Nigeria",
+    locationName: "Kano, Nigeria",
     date: "July & December 2025",
+    location: "Kano City Center",
     description:
-      "Our intensive four-month program is structured to equip participants with essential skills and knowledge.",
+      "In the heart of Northern Nigeria, this center combines cultural richness with advanced learning environments, catering to local and international audiences.",
   },
   {
     imageSrc: "/assets/location2.svg",
     locationName: "Abuja, Nigeria",
     date: "March & October 2025",
+    location: "Central Business District",
     description:
-      "Our intensive four-month program is structured to equip participants with essential skills and knowledge.",
+      "Our flagship location features state-of-the-art training facilities in Nigeria's capital city, ideal for government and private sector participants.",
   },
 ];
 
+type TTrainingLocationCardProps = {
+  imageSrc: string;
+  locationName: string;
+  date: string;
+  description: string;
+  location: string;
+};
+function TrainingLocationCard(props: TTrainingLocationCardProps) {
+  const { imageSrc, locationName, location, date, description } = props;
+  return (
+    <Card className="shadow-none border-none min-w-full md:min-w-80 max-w-full md:max-w-[340px]">
+      <CardContent>
+        <div className="w-full h-44">
+          <Image
+            src={imageSrc}
+            alt={locationName}
+            height={100}
+            width={200}
+            className="object-cover object-center aspect-video h-full w-full"
+          />
+        </div>
+      </CardContent>
+      <CardHeader className="gap-4">
+        <CardTitle>{locationName}</CardTitle>
+        <div className="w-full h-fit flex flex-col gap-2 text-sm font-light">
+          <p className="w-full flex items-center gap-2.5">
+            <MapPinnedIcon className="h-4 w-4" />
+            <span>{location}</span>
+          </p>
+          <p className="w-full flex items-center gap-2.5">
+            <CalendarDaysIcon className="h-4 w-4" />
+            <span>{date}</span>
+          </p>
+        </div>
+        <CardDescription>{description}</CardDescription>
+      </CardHeader>
+      <CardFooter>
+        <CardAction className="w-full">
+          <Button className="w-full rounded bg-brand-green-extralight">
+            View Details
+          </Button>
+        </CardAction>
+      </CardFooter>
+    </Card>
+  );
+}

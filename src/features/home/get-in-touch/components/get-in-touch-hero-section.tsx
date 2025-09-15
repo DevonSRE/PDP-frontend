@@ -1,28 +1,30 @@
 import React from "react";
 import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
 import { ContactRightBg } from "@/components/icon/contact-right-bg";
+import { Button } from "@/components/ui/button";
 
 export function GetContactSection() {
   return (
-    <section className="w-full px-6 py-58 bg-gray-50">
+    <section className="w-full px-6 py-58 bg-neutral-50">
       {/* Heading */}
       <div className="text-center mb-32">
-        <h2 className="text-2xl font-bold text-brand-green-text font-poppins">Get In Touch</h2>
-        <p className="mt-2 text-black max-w-2xl mx-auto font-poppins">
-          Have questions or need tailored training solutions for your institution?
-          Our team is here to help. Reach out and let’s explore how we can work
-          together to strengthen public systems and build capacity where it
-          matters most.
+        <h2 className="text-lg md:text-2xl font-bold text-brand-green-text">
+          Get In Touch
+        </h2>
+        <p className="mt-2 max-w-full md:max-w-2xl mx-auto text-xs md:text-sm font-light">
+          Have questions or need tailored training solutions for your
+          institution? Our team is here to help. Reach out and let’s explore how
+          we can work together to strengthen public systems and build capacity
+          where it matters most.
         </p>
       </div>
 
       {/* Contact Card */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto bg-white p-2 md:p-12 rounded-2xl shadow-lg">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 max-w-6xl mx-auto bg-white p-5 md:p-8 rounded-3xl">
         {/* Left Side - Info */}
         <div className="relative bg-teal-900 text-white rounded-2xl p-8 shadow-lg flex flex-col justify-between overflow-hidden">
-         
-         <ContactRightBg className="absolute -top-30 -left-30 rotate-180"/>
-         <ContactRightBg className="absolute bottom-0 right-0"/>
+          <ContactRightBg className="absolute -top-30 -left-30 rotate-180" />
+          <ContactRightBg className="absolute bottom-0 right-0" />
           <div className="flex-col justify-start">
             <h3 className="text-lg font-semibold mb-4">Office</h3>
             <p className="text-sm leading-relaxed mb-6">
@@ -62,27 +64,25 @@ export function GetContactSection() {
         </div>
 
         {/* Right Side - Form */}
-        <div className=" p-8 ">
+        <div className="p-8">
           <h3 className="text-lg  font-bold text-brand-green-text ">
             Contact Us
           </h3>
           <h1 className="text-sm  font-light text-black mb-12">
-            Have questions or need tailored training solutions for your institution? Our team is here to help. Reach out and let’s explore how we can work together to strengthen public systems and build capacity where it matters most.
+            Have questions or need tailored training solutions for your
+            institution? Our team is here to help. Reach out and let’s explore
+            how we can work together to strengthen public systems and build
+            capacity where it matters most.
           </h1>
-          <form className="space-y-6">
+          <form className="space-y-6 border-y border-dashed py-6">
             <div>
-              <label className="block text-sm font-light text-black mb-2">
+              <label className="block text-sm font-light mb-2">
                 Your Full Name
               </label>
               <input
                 type="text"
-                placeholder="Benjamin Benjamin J"
-                className="w-full 
-               border-b-2 border-black/20 px-4 py-2 
-                focus:border-2 focus:border-teal-600 focus:rounded-lg 
-                focus:outline-none focus:ring-0
-                placeholder-black font-poppins font-semibold
-              "
+                placeholder="Your name"
+                className="w-full border-b-2 border-black/20 px-4 py-2 focus-visible:border-brand-green-extralight focus-visible:outline-none font-semibold"
               />
             </div>
 
@@ -92,14 +92,8 @@ export function GetContactSection() {
               </label>
               <input
                 type="email"
-                placeholder="benjamin@email.com"
-                className="
-                w-full 
-                border-b-2 border-black/20 px-4 py-2 
-                focus:border-2 focus:border-teal-600 focus:rounded-lg 
-                focus:outline-none focus:ring-0
-                placeholder-black font-poppins font-semibold
-              "
+                placeholder="email@example.com"
+                className="w-full border-b-2 border-black/20 px-4 py-2 focus-visible:border-brand-green-extralight focus-visible:outline-none font-semibold"
               />
             </div>
 
@@ -109,23 +103,17 @@ export function GetContactSection() {
               </label>
               <input
                 placeholder="Enter your message here..."
-                  type="details"
-                className="
-                w-full 
-                border-b-2 border-black/20 px-4 py-2 
-                focus:border-2 focus:border-teal-600 focus:rounded-lg 
-                focus:outline-none focus:ring-0
-                placeholder-black font-poppins font-semibold
-              "
+                type="details"
+                className="w-full border-b-2 border-black/20 px-4 py-2 focus-visible:border-brand-green-extralight focus-visible:outline-none font-semibold"
               />
             </div>
 
-            <button
+            <Button
               type="submit"
-              className="w-full bg-teal-700 text-white py-2 rounded-lg hover:bg-teal-800 transition"
+              className="w-fit bg-teal-700 text-white py-2 px-10 rounded-lg hover:bg-brand-green transition"
             >
               Send Message
-            </button>
+            </Button>
           </form>
         </div>
       </div>
