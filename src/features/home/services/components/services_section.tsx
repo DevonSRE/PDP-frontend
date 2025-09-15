@@ -6,8 +6,8 @@ import { TService } from "../../lib/types";
 
 export function OurServicesSection() {
   return (
-    <section className="bg-gray-100 py-32 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-full md:max-w-6xl mx-auto flex flex-col gap-16">
+    <section className="bg-neutral-100 py-10 md:py-32 px-7 md:px-8">
+      <div className="max-w-full md:max-w-6xl mx-auto flex flex-col gap-8 md:gap-16">
         {services.map((service) => (
           <ServiceBox key={service.id} {...service} />
         ))}

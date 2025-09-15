@@ -13,7 +13,7 @@ export function ContactForm() {
       <div className="w-full max-w-3xl text-center flex flex-col gap-10">
         <div className="w-full max-w-full md:max-w-xl mx-auto flex flex-col gap-4">
           {/* Header */}
-          <h2 className="text-lg md:text-2xl font-semibold text-black">
+          <h2 className="text-xl md:text-2xl font-semibold text-black">
             Get In
             <span className="text-[#E4B800] text-poppins"> Touch</span>
           </h2>

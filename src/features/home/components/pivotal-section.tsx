@@ -6,6 +6,31 @@ import { FaqIcon } from "@/components/icon/faq-icon";
 import { PanIcon } from "@/components/icon/pan-icon";
 import { TopTierIcon } from "@/components/icon/top-tier";
 
+export function PivotalSection() {
+  return (
+    <section className="py-14 md:py-36 px-7 md:px-10 bg-gray-50 flex flex-col w-full gap-7 md:gap-14">
+      <div className="text-center flex flex-col gap-1.5 md:gap-2 items-center">
+        {/* Main Heading and First Card */}
+        <h2 className="text-xl md:text-3xl font-bold">
+          Why{" "}
+          <span className="text-brand-green-extralight">Choose Pivotal?</span>
+        </h2>
+        <p className="text-xs md:text-sm max-w-[490px] mx-auto">
+          At Pivotal Development Partners, we do more than deliver training — we
+          co-create learning experiences that drive results.
+        </p>
+      </div>
+
+      {/* Grid of smaller cards */}
+      <div className="flex flex-wrap justify-center md:justify-start gap-4 md:gap-6 w-full max-w-full md:max-w-[1230px] mx-auto">
+        {cardData.map((card, index) => (
+          <PivotalCard key={index} {...card} />
+        ))}
+      </div>
+    </section>
+  );
+}
+
 const cardData = [
   {
     id: 1,
@@ -43,28 +68,3 @@ const cardData = [
       "Our facilitators are not just trainers—they are seasoned professionals with deep expertise in governance, leadership, procurement, and organizational development.",
   },
 ];
-
-export function PivotalSection() {
-  return (
-    <section className="py-36 px-7 md:px-10 bg-gray-50 flex flex-col w-full gap-14">
-      <div className="text-center flex flex-col gap-2 items-center">
-        {/* Main Heading and First Card */}
-        <h2 className="text-3xl font-bold text-black">
-          Why{" "}
-          <span className="text-brand-green-extralight">Choose Pivotal?</span>
-        </h2>
-        <p className="text-black text-xs md:text-sm max-w-[490px] mx-auto">
-          At Pivotal Development Partners, we do more than deliver training — we
-          co-create learning experiences that drive results.
-        </p>
-      </div>
-
-      {/* Grid of smaller cards */}
-      <div className="flex md:flex-wrap justify-center md:justify-start gap-4 md:gap-6 w-full md:max-w-[1230px] mx-auto">
-        {cardData.map((card, index) => (
-          <PivotalCard key={index} {...card} />
-        ))}
-      </div>
-    </section>
-  );
-}

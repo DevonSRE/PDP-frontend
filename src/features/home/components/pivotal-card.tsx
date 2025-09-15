@@ -11,9 +11,9 @@ export function PivotalCard({ icon, title, description }: CardProps) {
   return (
     <div
       className={cn(
-        "relative overflow-hidden group ring-4 ring-white",
+        "relative overflow-hidden group ring-2 md:ring-4 ring-white",
         "bg-white flex flex-col gap-2 transition-all",
-        "w-full min-h-60 max-w-full md:max-w-sm rounded-2xl p-5",
+        "w-full min-h-44 md:min-h-60 max-w-full md:max-w-sm rounded-2xl p-2.5 md:p-5",
         "hover:ring-transparent hover:bg-brand-green-light hover:text-white",
       )}
     >
@@ -48,7 +48,7 @@ export function PivotalCard({ icon, title, description }: CardProps) {
       {icon && (
         <div
           className={cn(
-            "mb-4 w-12 h-12 transition-all",
+            "mb-1.5 md:mb-4 w-10 md:w-12 h-10 md:h-12 transition-all",
             "flex items-center justify-center",
             "rounded-full bg-brand-green-light text-gray-50",
             "group-hover:bg-white group-hover:text-brand-green-light",
@@ -59,11 +59,12 @@ export function PivotalCard({ icon, title, description }: CardProps) {
       )}
 
       {/* Content */}
-      <h3 className="leading-tight w-full max-w-xs text-lg font-semibold flex justify-start items-start">
+      <h3 className="leading-tight w-full max-w-full md:max-w-xs text-base md:text-lg font-semibold flex justify-start items-start">
         {title}
       </h3>
-      <p className="text-xs font-light">{description}</p>
+      <p className="text-xs font-light text-justify md:text-start">
+        {description}
+      </p>
     </div>
   );
 }
-

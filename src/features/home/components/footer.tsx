@@ -12,10 +12,10 @@ import { Input } from "@/components/ui/input";
 
 export function Footer() {
   return (
-    <footer className="bg-neutral-950 text-gray-400 py-16 px-10 md:px-32">
-      <div className="w-full flex flex-col gap-10">
+    <footer className="bg-neutral-950 text-gray-400 py-10 md:py-16 px-7 md:px-32">
+      <div className="w-full flex flex-col gap-8 md:gap-10">
         {/* Newsletter Section */}
-        <div className="flex flex-col items-center gap-10 md:flex-row">
+        <div className="flex flex-col items-center gap-4 md:gap-10 md:flex-row">
           <div className="flex w-full max-w-sm relative rounded-md h-12">
             <Input
               type="email"
@@ -29,13 +29,13 @@ export function Footer() {
               <SendHorizontalIcon />
             </button>
           </div>
-          <h4 className="text-lg text-neutral-300">
+          <h4 className="text-sm md:text-lg text-neutral-300 w-full md:w-fit">
             Stay informed. Subscribe to Our Newsletter for Regular Updates.
           </h4>
         </div>
 
-        <div className="w-full h-fit flex gap-6">
-          {/* Main Footer Links */}
+        <div className="w-full h-fit flex flex-col md:flex-row gap-3 md:gap-6">
+          {/* Logo */}
           <div className="">
             <div className="mb-6 lg:mb-0">
               <div className="flex items-center">
@@ -50,8 +50,9 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-6 w-full">
-            <div className="flex items-start justify-between gap-8 w-full px-8 md:px-16">
+          {/* Main Footer Links */}
+          <div className="flex flex-col gap-3 md:gap-6 w-full">
+            <div className="flex flex-wrap md:flex-nowrap items-start justify-between gap-8 w-full px-0 md:px-16">
               {/* Home Links */}
               <div>
                 <h4 className="mb-4 text-sm font-semibold text-gray-300">
@@ -187,14 +188,15 @@ export function Footer() {
             </div>
 
             {/* Bottom Legal Section */}
-            <div className="flex flex-col items-center justify-between border-t border-gray-700 pt-4 text-xs md:flex-row">
-              <div className="mb-2 md:mb-0">
+            <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 md:gap-0 border-t border-gray-700 pt-4 text-xs">
+              <div className="md:mb-0">
                 <p className="">
                   © 2023 Pivotal Development Partners Limited, All Rights
                   Reserved
                 </p>
               </div>
-              <div className="space-x-4">
+
+              <div className="flex items-center gap-4">
                 <a href="#" className="hover:text-white">
                   Support
                 </a>
@@ -245,4 +247,3 @@ export function Footer() {
     </footer>
   );
 }
-

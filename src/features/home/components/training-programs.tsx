@@ -3,20 +3,21 @@ import { CircleCheckIcon } from "lucide-react";
 
 export function TrainingPrograms() {
   return (
-    <section className="py-32 px-7 md:px-10 bg-brand-green-light flex flex-col gap-28 text-white">
+    <section className="py-14 md:py-32 px-7 md:px-10 bg-brand-green-light flex flex-col gap-7 md:gap-28 text-white">
       <div className="w-full h-fit flex flex-col gap-2 max-w-full md:max-w-4xl text-center mx-auto">
         <p className="text-xl md:text-3xl font-bold">
           BPP Training <span className="text-brand-yellow-dark">Programs</span>
         </p>
-        <p className="text-base md:text-lg font-light italic">
+        <p className="text-sm md:text-lg font-light italic">
           Our Bureau of Public Procurement (BPP) accredited programs are
           designed for public servants and procurement professionals across
           Africa and beyond.
         </p>
       </div>
-      <div className="w-full h-fit flex flex-col items-center gap-10 max-w-6xl p-4 mx-auto">
+
+      <div className="w-full h-fit flex flex-col items-center gap-5 md:gap-10 max-w-full md:max-w-6xl p-0 md:p-4 mx-auto">
         <p className="font-bold italic">Public Procurement Specialization</p>
-        <div className="w-full flex flex-wrap justify-between gap-7">
+        <div className="w-full flex flex-wrap justify-between gap-5 md:gap-7">
           {specialisations.map((specialty) => (
             <SpecialisationCard
               key={specialty.id}
@@ -66,7 +67,7 @@ function SpecialisationCard({
   description: string;
 }) {
   return (
-    <div className="bg-white w-full lg:w-135 min-h-48 rounded-xl flex flex-col items-start justify-center gap-2 p-7 text-black">
+    <div className="bg-white w-full lg:w-135 min-h-fit md:min-h-48 rounded-xl flex flex-col items-start justify-center gap-2 p-5 md:p-7 text-black">
       <div className="w-fit h-fit text-brand-green-extralight">
         <CircleCheckIcon />
       </div>

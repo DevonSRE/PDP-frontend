@@ -3,15 +3,15 @@ import { CourseCard } from "./course-card";
 
 export function CourseCategories() {
   return (
-    <div className="bg-white py-28 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto flex flex-col gap-28">
+    <div className="bg-white py-10 md:py-28 px-7 md:px-10">
+      <div className="max-w-full md:max-w-7xl w-full mx-auto flex flex-col gap-10 md:gap-28">
         {/* Header Section */}
         <div className="text-center">
           <h2 className="text-xl md:text-3xl font-bold">Course Categories</h2>
         </div>
 
         {/* Course Cards Grid */}
-        <div className="max-w-fit mx-auto flex flex-wrap justify-center gap-16">
+        <div className="max-w-fit mx-auto flex flex-wrap justify-center gap-10 md:gap-16">
           {courses.map((course, index) => (
             <CourseCard
               key={index}

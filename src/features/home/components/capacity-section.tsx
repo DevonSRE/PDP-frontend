@@ -9,21 +9,22 @@ export function CapacitySection() {
     <div
       className={cn(
         "w-full mx-auto bg-white rounded-2xl",
-        "p-[3px] bg-linear-to-b from-tranparent from-0% via-neutral-400/30 via-50% to-transparent to-100%",
+        "p-0.5 md:p-[3px] bg-linear-to-b from-tranparent from-0% via-neutral-400/30 via-50% to-transparent to-100%",
       )}
     >
       <div
         className={cn(
-          "flex gap-14",
+          "flex flex-col md:flex-row gap-7 md:gap-14",
           "w-full bg-white",
-          "px-24 py-40 rounded-lg",
+          "px-7 md:px-24 py-10 md:py-40 rounded-lg",
         )}
       >
         {/* What We Do */}
-        <div className="flex flex-col gap-8">
-          <div className="flex gap-7">
+        <div className="flex flex-col gap-4 md:gap-8">
+          <div className="flex gap-4 md:gap-7">
             <div className="w-1.5 min-h-full bg-linear-to-b from-10% from-transparent to-brand-yellow-dark" />
-            <div className="flex flex-col gap-4">
+
+            <div className="flex flex-col gap-2 md:gap-4">
               <div
                 className={cn(
                   "rounded-md bg-brand-yellow-dark/5",
@@ -33,10 +34,10 @@ export function CapacitySection() {
               >
                 <ApproachIcon />
               </div>
-              <h3 className="text-brand-yellow-dark font-bold text-lg">
+              <h3 className="text-brand-yellow-dark font-bold text-base md:text-lg">
                 What We Do
               </h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
+              <p className="text-gray-600 text-justify md:text-start text-xs md:text-sm leading-relaxed">
                 We specialize in strengthening institutions and individuals
                 through practical, context-specific training programs that
                 deliver measurable results.
@@ -44,7 +45,7 @@ export function CapacitySection() {
             </div>
           </div>
 
-          <div className="rounded-xl overflow-hidden shadow-md">
+          <div className="rounded-xl overflow-hidden shadow-md hidden md:block">
             <Image
               src="/assets/why.svg"
               alt="Training session"
@@ -56,10 +57,10 @@ export function CapacitySection() {
         </div>
 
         {/* Key Focus Area */}
-        <div className="flex gap-7 min-h-full max-w-xl">
+        <div className="flex gap-4 md:gap-7 min-h-full max-w-full md:max-w-xl">
           <div className="w-1.5 min-h-full bg-linear-to-b from-10% from-transparent to-brand-green-extralight" />
 
-          <div className="flex flex-col gap-4 text-brand-green-extralight">
+          <div className="flex flex-col gap-2 md:gap-4 text-brand-green-extralight">
             <div
               className={cn(
                 "rounded-md bg-green-600/5",
@@ -69,14 +70,14 @@ export function CapacitySection() {
             >
               <KeyFocusAreaIcon />
             </div>
-            <h3 className="text-brand-green-extralight font-bold text-lg mb-4">
+            <h3 className="text-brand-green-extralight font-bold text-base md:text-lg mb-2 md:mb-4">
               Key Focus Area
             </h3>
-            <ul className="space-y-4 text-gray-700 text-sm leading-relaxed">
+            <ul className="space-y-4 text-gray-700 text-xs md:text-sm leading-relaxed">
               {focusAreas.map((item) => (
-                <li key={item.id} className="flex items-start gap-2">
-                  <Dot className="text-black w-5 h-5 mt-1 flex-shrink-0" />
-                  <span>
+                <li key={item.id} className="flex items-start gap-1.5 md:gap-2">
+                  <Dot className="text-black w-5 h-5 mt-0.5 md:mt-1 flex-shrink-0" />
+                  <span className="text-justify md:text-start">
                     <strong>{item.title}:</strong> {item.text}
                   </span>
                 </li>
