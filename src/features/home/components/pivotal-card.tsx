@@ -1,34 +1,69 @@
-import React, { type ReactNode } from 'react';
+import { cn } from "@/lib/utils";
+import React, { type ReactNode } from "react";
 
 interface CardProps {
   icon?: ReactNode;
   title: string;
   description: string;
-  isMainCard?: boolean;
 }
 
-const PivotalCard: React.FC<CardProps> = ({ icon, title, description, isMainCard }) => {
-  // Conditional classes based on the 'isMainCard' prop
-  const cardClasses = isMainCard
-    ? 'bg-[#D9D9D9] rounded-3xl p-8 text-white flex flex-col justify-start items-start h-full' 
-    : 'bg-[#D9D9D9] rounded-2xl p-6 transition duration-300 ease-in-out hover:bg-teal-800 hover:shadow-xl text-black flex flex-col h-full justify-start items-start';
-
+export function PivotalCard({ icon, title, description }: CardProps) {
   return (
-    <div className={cardClasses}>
+    <div
+      className={cn(
+        "relative overflow-hidden group ring-4 ring-white",
+        "bg-white flex flex-col gap-2 transition-all",
+        "w-full min-h-60 max-w-full md:max-w-sm rounded-2xl p-5",
+        "hover:ring-transparent hover:bg-brand-green-light hover:text-white",
+      )}
+    >
+      {/* patterns start */}
+      <div
+        className={cn(
+          "absolute h-105 w-105 -top-85 -right-55 bg-gray-300/5 rounded-full",
+          "transition-all group-hover:bg-white/5",
+        )}
+      />
+      <div
+        className={cn(
+          "absolute h-105 w-105 -top-79 -right-67 bg-gray-300/5 rounded-full",
+          "transition-all group-hover:bg-white/5",
+        )}
+      />
+      <div
+        className={cn(
+          "absolute h-105 w-105 -top-67 -right-79 bg-gray-300/5 rounded-full",
+          "transition-all group-hover:bg-white/5",
+        )}
+      />
+      <div
+        className={cn(
+          "absolute h-105 w-105 -top-55 -right-85 bg-gray-300/5 rounded-full",
+          "transition-all group-hover:bg-white/5",
+        )}
+      />
+      {/* patterns end */}
+
       {/* Icon */}
       {icon && (
-        <div className="mb-4 w-14 h-14 rounded-full bg-[#064C3C] flex items-center justify-center text-white">
+        <div
+          className={cn(
+            "mb-4 w-12 h-12 transition-all",
+            "flex items-center justify-center",
+            "rounded-full bg-brand-green-light text-gray-50",
+            "group-hover:bg-white group-hover:text-brand-green-light",
+          )}
+        >
           {icon}
         </div>
       )}
 
       {/* Content */}
-      <div className="">
-        <h3 className="text-xl font-bold font-poppins mt-2 flex  justify-start items-start">{title}</h3>
-        <p className="mt-4 font-poppins font-light flex justify-start items-start">{description}</p>
-      </div>
+      <h3 className="leading-tight w-full max-w-xs text-lg font-semibold flex justify-start items-start">
+        {title}
+      </h3>
+      <p className="text-xs font-light">{description}</p>
     </div>
   );
-};
+}
 
-export default PivotalCard;

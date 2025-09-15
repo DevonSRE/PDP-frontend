@@ -1,25 +1,47 @@
-import React from 'react';
-import Image from 'next/image';
-
+import React from "react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { MessageIcon } from "@/components/icon/message-icon";
+import { cn } from "@/lib/utils";
+import { CircularPatterns } from "@/components/icon/circular-patterns";
 
 interface TestimonialCardProps {
-  name: string;
-  content: string;
+  name: string;
+  content: string;
 }
 
-const TestimonialCard: React.FC<TestimonialCardProps> = ({ name, content }) => {
-  return (
-    <div className="relative flex-shrink-0 p-6 bg-white rounded-3xl shadow-lg">
-    {/* <TestimonialCardBg className='absolute top-0 right-0 bg-transparent'/> */}
-      <div className="relative z-10">
-        <div className="mb-4 text-gray-500">
-          <Image src="/assets/message_icons.svg" alt="Message icon" width={32} height={32} />
-        </div>
-        <h3 className="text-xl font-semibold text-gray-800">{name}</h3>
-        <p className="mt-2 text-gray-600">{content}</p>
-      </div>
-    </div>
-  );
-};
-
-export default TestimonialCard;
+export function TestimonialCard({ name, content }: TestimonialCardProps) {
+  return (
+    <div
+      className={cn(
+        "group transition-all",
+        "w-full max-w-sm h-full p-[1.5px] rounded-2xl",
+        "hover:cursor-grab active:cursor-grabbing",
+        "hover:bg-linear-to-b hover:from-brand-yellow-extradark hover:via-brand-yellow-light hover:to-white",
+      )}
+    >
+      <Card
+        className={cn(
+          "transition-all group-hover:bg-brand-yellow-light border-none shadow-none gap-2.5",
+          "relative overflow-hidden",
+        )}
+      >
+        <CardHeader className="gap-4">
+          <CardDescription className="p-px rounded-full w-fit h-fit bg-white">
+            <MessageIcon className="h-10 w-10" />
+          </CardDescription>
+          <CardTitle>{name}</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <p className="text-xs md:text-sm font-light">{content}</p>
+        </CardContent>
+        <CircularPatterns className="absolute -top-28 -right-48 w-72 text-brand-yellow-light" />
+      </Card>
+    </div>
+  );
+}

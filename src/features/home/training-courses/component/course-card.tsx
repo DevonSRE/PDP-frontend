@@ -1,24 +1,44 @@
-import React from 'react';
-import Image from 'next/image';
+import React from "react";
+import Image from "next/image";
+import { cn } from "@/lib/utils";
 interface CourseCardProps {
   imageSrc: string;
   category: string;
   description: string;
 }
 
-const CourseCard: React.FC<CourseCardProps> = ({ imageSrc, category, description }) => {
+export function CourseCard({
+  imageSrc,
+  category,
+  description,
+}: CourseCardProps) {
   return (
-    <div className="bg-white rounded-sm shadow-sm overflow-hidden flex flex-col  items-start  hover:shadow-xl transition-shadow duration-300">
-      <Image src={imageSrc} alt={category} className="w-full h-52 object-cover" />
-      <div className="p-6 flex-grow flex flex-col items-start ">
-        <h3 className="text-xl font-bold text-gray-800 mb-2">{category}</h3>
-        <p className="text-gray-600 text-sm mb-4 items-start ">{description}</p>
-        <button className="self-start mt-auto bg-[#009981] text-white font-poppins py-2 w-full rounded-md hover:bg-teal-50 hover:text-teal-600 transition-colors duration-300">
+    <div
+      className={cn(
+        "flex flex-col gap-3.5 items-start",
+        "rounded-sm overflow-hidden min-w-full md:min-w-96 max-w-full md:max-w-lg",
+        "bg-white p-3",
+      )}
+    >
+      <div className="w-full rounded-3xl overflow-hidden min-h-48 h-52">
+        <Image
+          src={imageSrc}
+          alt={category}
+          width={200}
+          height={200}
+          className="size-full object-cover"
+        />
+      </div>
+
+      <div className="flex-grow flex flex-col items-start gap-2.5">
+        <h3 className="text-sm md:text-base font-semibold">{category}</h3>
+        <p className="text-gray-600 text-xs md:text-sm items-start ">
+          {description}
+        </p>
+        <button className="bg-brand-green-extralight py-2 w-full rounded-md hover:bg-brand-green-light text-white text-xs transition-colors duration-300">
           View Course
         </button>
       </div>
     </div>
   );
-};
-
-export default CourseCard;
+}
