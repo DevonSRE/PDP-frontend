@@ -16,7 +16,7 @@ export function ProfessionalCard({
 }: ProfessionalCardProps) {
   return (
     <div
-      className="relative overflow-hidden h-112 w-80 bg-cover bg-center"
+      className="relative overflow-hidden h-96 md:h-112 w-full md:w-80 bg-cover bg-center"
       style={{
         backgroundImage: `linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.6)), url(${image})`,
       }}

@@ -5,13 +5,13 @@ import React from "react";
 
 export function CallToAction() {
   return (
-    <section className="relative w-full overflow-hidden h-[75dvh] bg-neutral-50 flex justify-center items-center">
+    <section className="relative w-full overflow-hidden h-[75dvh] bg-neutral-50 flex justify-center items-center px-7 md:px-10">
       {/* Background SVG */}
-      <AboutServicesBG className="w-144 absolute -top-40 -left-80" />
-      <AboutServicesBG className="w-144 absolute -bottom-24 -left-80 -scale-y-100" />
+      <AboutServicesBG className="z-0 w-144 absolute -top-40 -left-80" />
+      <AboutServicesBG className="z-0 w-144 absolute -bottom-24 -left-80 -scale-y-100" />
 
-      <AboutServicesBG className="w-144 absolute -top-40 -right-72" />
-      <AboutServicesBG className="w-144 absolute -bottom-24 -right-72 -scale-y-100" />
+      <AboutServicesBG className="z-0 w-144 absolute -top-40 -right-72" />
+      <AboutServicesBG className="z-0 w-144 absolute -bottom-24 -right-72 -scale-y-100" />
 
       {/* Content */}
       <div className="z-10 text-center flex flex-col w-full gap-4">

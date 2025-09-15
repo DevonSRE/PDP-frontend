@@ -4,8 +4,11 @@ import Image from "next/image";
 export function AboutUsHero() {
   return (
     <section className="relative h-dvh w-full bg-white px-7 md:px-10 flex justify-center items-center">
-      <div className="absolute inset-0 z-0 h-full w-full bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_right,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem] [mask-image:radial-gradient(ellipse_80%_30%_at_50%_80%,#000_70%,transparent_110%)]"></div>
-      <div className="absolute inset-0 z-0 h-full w-full bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_right,#f0f0f0_1px,transparent_1px)] bg-[size:7rem] [mask-image:radial-gradient(ellipse_80%_30%_at_50%_80%,#000_70%,transparent_110%)]"></div>
+      <>
+        <div className="absolute inset-0 z-0 h-full w-full bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_right,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem] [mask-image:radial-gradient(ellipse_80%_30%_at_50%_80%,#000_70%,transparent_110%)]"></div>
+        <div className="absolute inset-0 z-0 h-full w-full bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_right,#f0f0f0_1px,transparent_1px)] bg-[size:7rem] [mask-image:radial-gradient(ellipse_80%_30%_at_50%_80%,#000_70%,transparent_110%)]"></div>
+      </>
+
       <div className="flex flex-col gap-10 z-10 mx-auto px-4 text-center">
         {/* Image Grid */}
         <div className="flex justify-center">
@@ -13,7 +16,7 @@ export function AboutUsHero() {
             {collages.map((item, index) => (
               <div
                 key={item.id}
-                className={`w-80 h-80 rounded-full border-4 border-white shadow-lg overflow-hidden 
+                className={`w-28 md:w-80 h-28 md:h-80 rounded-full border-4 border-white shadow-lg overflow-hidden 
                 ${index !== 0 ? "-ml-16" : ""}`} // overlap except first
               >
                 <Image

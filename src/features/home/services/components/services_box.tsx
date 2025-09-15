@@ -52,9 +52,9 @@ export function ServiceBox(props: TService) {
   };
 
   return (
-    <div className="flex flex-col md:flex-row rounded-3xl bg-white p-5">
+    <div className="flex flex-col md:flex-row rounded-3xl bg-white p-2 md:p-5">
       {/* Image Section */}
-      <div className="h-full w-full md:w-1/3 rounded-3xl flex-shrink-0">
+      <div className="hidden md:block h-full w-full md:w-1/3 rounded-3xl flex-shrink-0">
         <Image
           src={props.img}
           alt={props.title}
@@ -65,7 +65,7 @@ export function ServiceBox(props: TService) {
       </div>
 
       {/* Content Section */}
-      <div className="flex-1 w-full p-8 flex flex-col gap-4 justify-center">
+      <div className="flex-1 w-full p-4 md:p-8 flex flex-col gap-4 justify-center">
         <h3
           className={cn(
             "text-xl font-semibold",

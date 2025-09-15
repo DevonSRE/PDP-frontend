@@ -7,9 +7,9 @@ export function HomePageStat() {
       {/* Top Stats Section */}
       <div
         className={cn(
-          "max-w-7xl mx-auto",
-          "bg-brand-green-light text-white rounded-2xl p-4 shadow-lg",
-          "flex items-center",
+          "max-w-full md:max-w-7xl mx-auto",
+          "bg-brand-green-light text-white rounded-2xl p-2 md:p-4 shadow-md md:shadow-lg",
+          "flex items-center flex-col md:flex-row",
         )}
       >
         {/* Left Content */}
@@ -39,16 +39,20 @@ export function HomePageStat() {
         </div>
 
         {/* Stats */}
-        <div className="flex-1 flex items-center justify-evenly">
+        <div className="p-4 md:p-0 flex-1 flex flex-wrap md:flex-nowrap items-center justify-center md;justify-evenly gap-10 md:gap-0">
           {stats.map((stat, idx) => {
             return (
               <Fragment key={stat.id}>
-                <div className="max-w-28 flex flex-col items-start text-start">
-                  <p className="text-5xl font-semibold">{stat.value}+</p>
-                  <p className="text-sm text-white">{stat.description}</p>
+                <div className="max-w-full md:max-w-28 w-fit flex flex-col items-start text-start">
+                  <p className="text-4xl md:text-5xl font-semibold">
+                    {stat.value}+
+                  </p>
+                  <p className="text-xs md:text-sm text-white max-w-28 md:max-w-full">
+                    {stat.description}
+                  </p>
                 </div>
                 {idx < stats.length - 1 && (
-                  <div className="h-5 w-px bg-white/20" />
+                  <div className="hidden md:block h-5 w-px bg-white/20" />
                 )}
               </Fragment>
             );
@@ -65,4 +69,3 @@ const stats = [
   { id: 3, value: "100", description: "Professional Courses" },
   { id: 4, value: "5K", description: "Trained Professionals" },
 ];
-
