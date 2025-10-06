@@ -1,40 +1,38 @@
-import { AboutServicesBG } from '@/components/icon/about-service-bg';
-import React from 'react';
+import { AboutServicesBG } from "@/components/icon/about-service-bg";
+import { cn } from "@/lib/utils";
+import { AtSignIcon } from "lucide-react";
+import React from "react";
 
 export function CallToAction() {
   return (
-        <section className="relative w-full overflow-hidden p-48 bg-white">
-          {/* Background SVG */}
-          <AboutServicesBG className="absolute -top-10 -left-90" />
-          <AboutServicesBG className="absolute top-10 -left-90" />
-                <AboutServicesBG className="absolute -top-10 -right-90" />
-                 <AboutServicesBG className="absolute top-20 -right-90" />
+    <section className="relative w-full overflow-hidden h-[75dvh] bg-neutral-50 flex justify-center items-center px-7 md:px-10">
+      {/* Background SVG */}
+      <AboutServicesBG className="z-0 w-144 absolute -top-40 -left-80" />
+      <AboutServicesBG className="z-0 w-144 absolute -bottom-24 -left-80 -scale-y-100" />
+
+      <AboutServicesBG className="z-0 w-144 absolute -top-40 -right-72" />
+      <AboutServicesBG className="z-0 w-144 absolute -bottom-24 -right-72 -scale-y-100" />
 
       {/* Content */}
-      <div className="container mx-auto px-4 py-8 relative z-10 text-center font-poppins">
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+      <div className="z-10 text-center flex flex-col w-full gap-4">
+        <h2 className="text-lg md:text-2xl font-bold text-gray-900">
           Interested in Working With Us?
         </h2>
-        <p className="text-lg md:text-xl text-gray-600 max-w-xl mx-auto mb-8 font-poppins">
-          Let’s collaborate to build the capacity of your team and transform institutional outcomes.
+        <p className="text-sm md:text-base text-gray-600 max-w-lg mx-auto">
+          Let’s collaborate to build the capacity of your team and transform
+          institutional outcomes.
         </p>
 
-        <button className="flex items-center justify-center mx-auto px-8 py-4 text-white bg-green-900 rounded-lg hover:bg-green-800 transition-colors duration-300 font-poppins">
-          <svg
-            className="w-5 h-5 mr-2"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-9 13v-3a2 2 0 002-2V9a2 2 0 00-2-2H9a2 2 0 00-2 2v3a2 2 0 002 2h3z"
-            />
-          </svg>
-          Get In Touch
+        <button
+          className={cn(
+            "text-white text-sm",
+            "mx-auto px-8 py-4 rounded-2xl",
+            "flex gap-2 items-center justify-center",
+            "bg-green-900 hover:bg-green-800 transition-colors duration-300",
+          )}
+        >
+          <AtSignIcon className="h-4 w-4" />
+          <span>Get In Touch</span>
         </button>
       </div>
     </section>
