@@ -30,16 +30,16 @@ export function NavBar() {
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-gradient-to-b from-[#009782]/50 from-20% to-transparent to-80% backdrop-blur-[2px] pt-8">
-      <nav className="w-full md:container md:mx-auto px-4 flex items-center justify-between">
+      <nav className="w-full md:container md:mx-auto px-2 lg:px-4 flex items-center justify-between gap-4">
         {/* Logo */}
         <Logo className="w-40" />
 
         {/* Desktop Navigation */}
         <ul
           className={cn(
-            "text-sm font-bai-jamjuree",
+            "text-xs lg:text-sm font-bai-jamjuree",
             "rounded-full border-2 border-white shadow-sm",
-            "hidden md:flex items-center justify-center gap-4 p-4 bg-[#064C3C]",
+            "hidden md:flex items-center justify-center gap-2 lg:gap-4 p-2 lg:p-4 bg-[#064C3C]",
           )}
         >
           {navLinks.map((link) => (
@@ -47,7 +47,7 @@ export function NavBar() {
               <Link
                 href={link.href}
                 className={cn(
-                  "px-4 py-2 font-medium transition-colors duration-200",
+                  "px-2 lg:px-4 py-2 font-normal md:font-medium transition-colors duration-200 text-center",
                   pathname === link.href
                     ? "text-white font-semibold"
                     : "text-gray-300 hover:text-teal-300",
@@ -60,7 +60,7 @@ export function NavBar() {
         </ul>
 
         {/* Desktop Buttons */}
-        <div className="hidden md:flex items-center space-x-4 font-bai-jamjuree text-sm">
+        <div className="hidden md:flex items-center gap-2 lg:gap-4 font-bai-jamjuree text-xs lg:text-sm">
           <Button variant="default" className="rounded-full shadow-sm">
             Learn More
           </Button>
@@ -74,7 +74,7 @@ export function NavBar() {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-black"
+          className="md:hidden"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}

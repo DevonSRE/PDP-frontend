@@ -16,7 +16,7 @@ export function HomePageStat() {
         <div
           className={cn(
             "bg-linear-to-b from-brand-green-light/5 to-white",
-            "w-80 p-[1.5px] rounded-lg overflow-hidden",
+            "w-full sm:w-80 p-[1.5px] rounded-lg overflow-hidden",
           )}
         >
           <div className="w-full h-full bg-brand-green-light rounded-lg">
@@ -39,7 +39,7 @@ export function HomePageStat() {
         </div>
 
         {/* Stats */}
-        <div className="p-4 md:p-0 flex-1 flex flex-wrap md:flex-nowrap items-center justify-center md;justify-evenly gap-10 md:gap-0">
+        <div className="p-4 md:p-0 flex-1 flex flex-wrap md:flex-nowrap items-center justify-center md:justify-evenly gap-10 md:gap-0">
           {stats.map((stat, idx) => {
             return (
               <Fragment key={stat.id}>
