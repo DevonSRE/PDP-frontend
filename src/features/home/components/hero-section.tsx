@@ -33,7 +33,7 @@ export function HeroSection() {
             <span className="hidden md:inline">🥳</span>
           </p>
           <span className="text-xs md:text-base font-light">
-            2025 Course Schedule now available,
+            2026 Course Schedule now available,
           </span>
           <Link
             href="#"
@@ -65,9 +65,10 @@ export function HeroSection() {
 
         {/* Subtext */}
         <p className="text-gray-600 max-w-full md:max-w-3xl mx-auto mb-5 md:mb-10 text-sm md:text-base">
-          Explore Our 2025 Training Calendar Featuring New BPP Courses, Global
-          Venues, and Customizable Learning Tracks for Public and Private Sector
-          Professionals
+          Explore Our 2026 Training Calendar Featuring courses on the New
+          Standard Bidding Document updated by the Bureau of Public Procurement
+          (BPP). Global Venues, and Customizable Learning Tracks for Public and
+          Private Sector Professionals
         </p>
 
         {/* Buttons */}
@@ -90,7 +91,7 @@ export function HeroSection() {
             )}
           >
             <CalendarRange />
-            View 2025 Course Schedule
+            View 2026 Course Schedule
           </Link>
         </div>
       </div>
@@ -98,9 +99,9 @@ export function HeroSection() {
       {/* Foreground image + overlay */}
       <div
         className={cn(
-          "absolute left-0 bottom-0 md:-bottom-40 flex justify-start z-10 w-full",
-          "after:absolute after:-bottom-0 md:after:bottom-40 after:rounded-t-2xl after:border-t-8 after:border-x-8 after:border-brand-yellow-extradark",
           "after:w-full after:h-24 after:bg-brand-yellow-dark after:z-0",
+          "absolute left-0 -bottom-20 sm:bottom-0 md:-bottom-40 flex justify-start z-10 w-full",
+          "after:absolute after:-bottom-0 md:after:bottom-40 after:rounded-t-2xl after:border-t-8 after:border-x-8 after:border-brand-yellow-extradark",
         )}
       >
         <Image
