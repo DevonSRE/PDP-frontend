@@ -18,6 +18,23 @@ export function HeroSection() {
       {/* Background SVG */}
       <HeroBg className="h-full absolute inset-0 min-h-dvh object-cover z-0 top-0 left-0 right-0 bottom-0" />
 
+      {/* Foreground image + overlay */}
+      <div
+        className={cn(
+          "after:w-full after:h-24 md:after:h-16 lg:after:h-18 after:bg-brand-yellow-dark after:z-0",
+          "absolute left-0 -bottom-20 sm:bottom-0 md:-bottom-40 flex justify-start z-10 w-full",
+          "after:absolute after:-bottom-0 md:after:bottom-40 after:rounded-t-2xl after:border-t-8 after:border-x-8 after:border-brand-yellow-extradark",
+        )}
+      >
+        <Image
+          src="/assets/hero_image.svg"
+          alt="Training session"
+          className="w-full md:w-fit md:max-w-[60%] lg:max-w-[60%] object-contain z-10"
+          width={800}
+          height={400}
+        />
+      </div>
+
       {/* Content sits on top */}
       <div className="relative z-10 -translate-y-14 max-w-full md:max-w-5xl mx-auto text-center px-7 md:px-8">
         {/* Badge */}
@@ -94,23 +111,6 @@ export function HeroSection() {
             View 2026 Course Schedule
           </Link>
         </div>
-      </div>
-
-      {/* Foreground image + overlay */}
-      <div
-        className={cn(
-          "after:w-full after:h-24 after:bg-brand-yellow-dark after:z-0",
-          "absolute left-0 -bottom-20 sm:bottom-0 md:-bottom-40 flex justify-start z-10 w-full",
-          "after:absolute after:-bottom-0 md:after:bottom-40 after:rounded-t-2xl after:border-t-8 after:border-x-8 after:border-brand-yellow-extradark",
-        )}
-      >
-        <Image
-          src="/assets/hero_image.svg"
-          alt="Training session"
-          className="w-full md:w-fit object-contain z-10"
-          width={800}
-          height={400}
-        />
       </div>
     </section>
   );
