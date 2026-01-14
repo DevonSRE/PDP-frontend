@@ -143,7 +143,7 @@ export function Footer() {
                       />
                     </svg>
                     <a href="tel:+2347077788813">
-                      <span>07077788813</span>
+                      <span>+234 707 778 8813</span>
                     </a>
                   </li>
                   <li className="flex items-center">
