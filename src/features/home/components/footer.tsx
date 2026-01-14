@@ -115,7 +115,7 @@ export function Footer() {
                   </li>
                   <li>
                     <a href="#" className="hover:text-white">
-                      2025 Course Schedule
+                      2026 Course Schedule
                     </a>
                   </li>
                 </ul>
@@ -142,7 +142,9 @@ export function Footer() {
                         d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.14-7.14c-.162-.441.004-.928.38-1.21l1.293-.97c.362-.271.527-.733.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H2.25A2.25 2.25 0 000 4.5v2.25z"
                       />
                     </svg>
-                    <span>+234 810 000 0000</span>
+                    <a href="tel:+2347077788813">
+                      <span>+234 707 778 8813</span>
+                    </a>
                   </li>
                   <li className="flex items-center">
                     <svg
@@ -159,7 +161,9 @@ export function Footer() {
                         d="M21.75 6.75v8.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25v-8.5m19.5 0a.75.75 0 00-.75-.75h-15a.75.75 0 00-.75.75m16.5 0v.602c0 .24-.132.458-.33.585l-7.25 4.35c-.14.084-.31.084-.45 0l-7.25-4.35a.69.69 0 01-.33-.585v-.602m16.5 0a.75.75 0 01.75-.75h-15a.75.75 0 01.75.75"
                       />
                     </svg>
-                    <span>info@pivotaldevelopment.com</span>
+                    <a href="mailto:info@pidev.org">
+                      <span>info@pidev.org</span>
+                    </a>
                   </li>
                   <li className="flex items-center">
                     <svg
@@ -181,7 +185,10 @@ export function Footer() {
                         d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
                       />
                     </svg>
-                    <span>No 4 Sanantonia dummyaddress GRA.</span>
+                    <span>
+                      House 14, Cluster A, Admiralty Estate, Navy Town, Asokoro,
+                      Abuja Nigeria
+                    </span>
                   </li>
                 </ul>
               </div>
