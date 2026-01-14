@@ -4,7 +4,7 @@ import { ApproachIcon } from "@/components/icon/approach-icon";
 
 export function ApproachSection() {
   return (
-    <section className="relative overflow-hidden bg-brand-green text-white px-7 md:px-10 py-10 md:py-36">
+    <section className="relative overflow-hidden bg-brand-green text-white px-7 md:px-10 py-10 md:py-20 xl:py-24">
       <div className="mx-auto flex flex-col md:flex-row justify-end items-center w-full md:p-10">
         {/* Left Image */}
         <div className="hidden md:block absolute -left-105 -top-52 w-full max-w-4xl mx-auto">
@@ -12,7 +12,7 @@ export function ApproachSection() {
           <div className="rounded-full h-fit w-fit p-14 bg-white/5 ">
             <div className="rounded-full h-fit w-fit p-14 bg-white/5 ">
               <div className="rounded-full h-fit w-fit p-14 bg-white/5 ">
-                <div className="w-222 h-222 object-cover z-10 rounded-full">
+                <div className="w-222 md:w-200 lg:w-182 h-222 md:h-200 lg:h-182 object-cover z-10 rounded-full">
                   <Image
                     src="/assets/circular_image.png"
                     alt="Training session"
@@ -27,7 +27,7 @@ export function ApproachSection() {
         </div>
 
         {/* Right Content */}
-        <div className="space-y-6 md:space-y-8 max-w-full md:max-w-2xl w-full">
+        <div className="space-y-6 md:space-y-8 max-w-full md:max-w-2xl lg:max-w-xl w-full z-30 md:bg-linear-to-r from-black/30 to-transparent backdrop-blur-md p-3 rounded-lg">
           {approachItems.map((item, index) => (
             <div key={index} className="flex flex-col w-full gap-1.5 md:gap-4">
               <div className="bg-brand-green/20 pb-2 md:pb-4 w-full flex items-center gap-2 md:gap-4">
@@ -39,7 +39,7 @@ export function ApproachSection() {
                 </h3>
               </div>
 
-              <p className="text-white text-xs md:text-sm leading-relaxed text-justify md:text-start">
+              <p className="text-white text-xs lg:text-sm leading-relaxed text-justify md:text-start">
                 {item.description}
               </p>
             </div>

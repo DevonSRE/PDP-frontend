@@ -22,7 +22,7 @@ export function PivotalSection() {
       </div>
 
       {/* Grid of smaller cards */}
-      <div className="flex flex-wrap justify-center md:justify-start gap-4 md:gap-6 w-full max-w-full md:max-w-[1230px] mx-auto">
+      <div className="flex flex-wrap justify-center md:justify-center gap-4 md:gap-6 w-full max-w-full md:max-w-[1230px] mx-auto">
         {cardData.map((card, index) => (
           <PivotalCard key={index} {...card} />
         ))}
