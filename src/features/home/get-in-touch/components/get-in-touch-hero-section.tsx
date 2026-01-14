@@ -30,23 +30,27 @@ export function GetContactSection() {
               Office
             </h3>
             <p className="text-xs md:text-sm leading-relaxed mb-3 md:mb-6">
-              Mon–Fri 9am to 5pm, Sat 9am to 1pm <br />
-              No 2 Jibrin Biyaminu Lane, Beside Mountain of Fire, Kakuri, Kaduna
-              (by Kowa Council)
+              House 14, Cluster A, Admiralty Estate, Navy Town, Asokoro, Abuja
+              Nigeria
             </p>
 
             <h3 className="text-base md:text-lg font-semibold mb-1 md:mb-2">
               Phone
             </h3>
             <p className="mb-3 md:mb-6 text-xs md:text-sm">
-              +234 806 076 8660 <br /> +234 812 002 4814
+              <a href="tel:+2347077788813">
+                <span>+234 707 778 8813</span>
+              </a>
             </p>
 
             <h3 className="text-base md:text-lg font-semibold mb-1 md:mb-2">
               E-Mail
             </h3>
             <p className="mb-3 md:mb-6 text-xs md:text-sm">
-              We’re here to help: <br /> info@creativeskillsimport.com
+              We’re here to help: <br />
+              <a href="mailto:info@pidev.org">
+                <span>info@pidev.org</span>
+              </a>
             </p>
           </div>
 
