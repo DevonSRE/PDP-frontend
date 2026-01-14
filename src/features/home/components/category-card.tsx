@@ -1,23 +1,45 @@
-import React, { type ReactNode } from 'react';
+import { cn } from "@/lib/utils";
+import React, { type ReactNode } from "react";
 
 interface CategoryCardProps {
-  icon: ReactNode; 
+  id?: number;
+  index: number;
+  icon: ReactNode;
   title: string;
   description: string;
 }
 
-const CategoryCard: React.FC<CategoryCardProps> = ({ icon, title, description }) => {
+export function CategoryCard({
+  icon,
+  index,
+  title,
+  description,
+}: CategoryCardProps) {
   return (
-    <div className="flex items-start rounded-2xl bg-white p-6 shadow-sm transition-shadow duration-300 hover:shadow-lg">
-      <div className="mr-4 rounded-8 bg-gray-100 p-2 text-gray-500 h-24 w-24 flex items-center justify-center">
-        {icon}
-      </div>
-      <div className="flex-col items-start justify-start">
-        <h3 className="text-lg font-bold text-black text-poppins">{title}</h3>
-        <p className="mt-2 text-sm text-black text-poppins">{description}</p>
+    <div
+      className={cn(
+        "rounded p-5 md:p-8",
+        "transition-all duration-300",
+        "flex items-start gap-4 w-full",
+        [
+          index % 2 === 0
+            ? "justify-end hover:bg-linear-to-r from-transparent to-white transition-all"
+            : "justify-start hover:bg-linear-to-l from-transparent to-white transition-all",
+        ],
+      )}
+    >
+      <div className="w-fit max-w-full md:max-w-2xl gap-4 md:gap-8 flex flex-col md:flex-row items-start md:items-center">
+        <div className="rounded-md bg-brand-green/5 text-brand-green p-2 h-14 md:h-16 min-w-12 md:min-w-14 w-12 md:w-14 flex items-center justify-center">
+          {icon}
+        </div>
+
+        <div className="flex flex-col gap-1 items-start justify-start text-start w-full md:w-fit">
+          <h3 className="text-lg font-semibold">{title}</h3>
+          <p className="text-sm font-light text-justify md:text-start">
+            {description}
+          </p>
+        </div>
       </div>
     </div>
   );
-};
-
-export default CategoryCard;
+}

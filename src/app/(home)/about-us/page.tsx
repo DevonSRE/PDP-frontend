@@ -1,13 +1,16 @@
 import { CallToAction } from "@/features/home/about-us/components/about-us-call";
 import { ContactForm } from "@/features/home/about-us/components/about-us-contact-us";
-import AboutUsHeroSection from "@/features/home/about-us/components/about-us-hero";
-import MeetTheProfessional from "@/features/home/about-us/components/about-us-professional";
+import { AboutUsHero } from "@/features/home/about-us/components/about-us-hero";
+import { MeetTheProfessional } from "@/features/home/about-us/components/meet-the-professional";
 
-export default function AboutUs(){
- return <div className="AboutUs">
-    <AboutUsHeroSection/>
-    <MeetTheProfessional/>
-    <CallToAction/>
-    <ContactForm/>
- </div>
+export default function AboutUs() {
+  return (
+    <div className="AboutUs">
+      <AboutUsHero />
+      <MeetTheProfessional />
+      <CallToAction />
+      <ContactForm />
+    </div>
+  );
 }
+

@@ -1,56 +1,72 @@
-import React from "react"
+"use client";
+
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { cn } from "@/lib/utils";
+import TextareaAutosize from "react-textarea-autosize";
 
 export function ContactSection() {
   return (
-    <section className="relative w-full h-full  overflow-hidden bg-black">
-
+    <section
+      className={cn(
+        "px-7",
+        "relative w-full h-dvh bg-black",
+        "flex items-center justify-center",
+        "relative overflow-hidden text-white",
+      )}
+    >
       {/* Background SVG */}
-     {/* <ContactCardBg className="absolute -bottom-30 w-full -right-30 "/>
-     <ContactCardBg className="absolute -top-30 w-full -left-30 rotate-180"/> */}
-      <div>
-
-          {/* Content sits on top */}
-      <div className="relative z-10 max-w-2xl mx-auto text-center p-20 px-4 md:px-8">
-        {/* Heading */}
-        <h2 className="text-3xl md:text-4xl font-bold text-yellow-500 font-poppins">
-          Get In Touch
-        </h2>
-        <p className="text-[15px] text-gray-400 font-poppins pt-4">
-          Have questions or need tailored training solutions for your institution? 
-          Our team is here to help. Reach out and let&apos;s explore how we can work together 
-          to strengthen public systems and build capacity where it matters most.
-        </p>
-
+      {/*
+        <ContactCardBg className="absolute -bottom-30 w-full -right-30 "/>
+        <ContactCardBg className="absolute -top-30 w-full -left-30 rotate-180"/>
+      */}
+      <div className="flex flex-col items-center gap-8 min-w-full w-full">
+        {/* Content sits on top */}
+        <div className="relative z-10 max-w-full md:max-w-4xl mx-auto text-center flex flex-col items-center w-full gap-4">
+          {/* Heading */}
+          <h2 className="text-lg md:text-2xl font-semibold text-brand-yellow-dark">
+            Get In Touch
+          </h2>
+          <p className="text-sm md:text-base w-full max-w-2xl">
+            Have questions or need tailored training solutions for your
+            institution? Our team is here to help. Reach out and let&apos;s
+            explore how we can work together to strengthen public systems and
+            build capacity where it matters most.
+          </p>
+        </div>
         {/* Form */}
-        <form className="mt-8 space-y-6">
-          <input
-            type="text"
-            placeholder="Your full name"
-            className="w-full rounded-md border-2 border-gray-700 bg-transparent py-3 px-4 text-gray-200 text-[14px] font-poppins outline-none transition-colors duration-300 focus:border-yellow-500"
-          />
-          <input
-            type="email"
-            placeholder="Your Email"
-            className="w-full rounded-md border-2 border-gray-700 bg-transparent py-3 px-4 text-gray-200 text-[14px] font-poppins outline-none transition-colors duration-300 focus:border-yellow-500"
-          />
-          <textarea
-            placeholder="Your Message"
-            rows={5}
-            className="w-full resize-none rounded-md border-2 border-gray-700 bg-transparent py-3 px-4 text-gray-200 text-[14px] font-poppins outline-none transition-colors duration-300 focus:border-yellow-500"
-          ></textarea>
-
-          <button
-            type="submit"
-            className="w-full rounded-md bg-gradient-to-r from-yellow-400 to-yellow-600 py-3 font-semibold text-black font-poppins transition-transform duration-300 hover:scale-105"
-          >
-            Send Message
-          </button>
-        </form>
+        <ContactForm />
       </div>
-      </div>
-    
     </section>
-  )
+  );
 }
 
-export default ContactSection
+export function ContactForm() {
+  return (
+    <form
+      action=""
+      className="font-poppins flex flex-col max-w-full md:max-w-3xl w-full mx-auto gap-4"
+    >
+      <Input
+        type="text"
+        placeholder="Your full name"
+        className="h-12 !py-7 !px-4 placeholder:text-white w-full"
+      />
+      <Input
+        type="email"
+        placeholder="Your Email"
+        className="h-12 !py-7 !px-4 placeholder:text-white w-full"
+      />
+      <TextareaAutosize
+        className="p-2 text-sm placeholder:text-white w-full rounded-lg border border-input"
+        placeholder="Your Message"
+        minRows={3}
+      />
+
+      <Button type="submit" className="bg-brand-yellow-dark h-14 text-black">
+        Send Message
+      </Button>
+    </form>
+  );
+}
