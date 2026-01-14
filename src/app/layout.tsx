@@ -42,7 +42,7 @@ const baiJamjuree = Bai_Jamjuree({
 export const metadata: Metadata = {
   title: "Pivotal Development Partners",
   description:
-    "PDP - A leading software development company providing innovative solutions for businesses of all sizes.",
+    "PDP - A company specializing in providing training and professional development.",
 };
 
 export default function RootLayout({
