@@ -29,17 +29,17 @@ export function NavBar() {
   const pathname = usePathname();
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-gradient-to-b from-[#009782]/50 from-20% to-transparent to-80% backdrop-blur-[2px] pt-8 md:pt-4 lg:pt-2">
-      <nav className="w-full md:container md:mx-auto px-2 md:px-4 lg:px-2 flex items-center justify-between gap-4">
+    <header className="fixed top-0 left-0 w-full z-50 bg-gradient-to-b from-[#009782]/50 from-20% to-transparent to-80% backdrop-blur-[2px] pt-8 md:pt-2">
+      <nav className="w-full md:container md:mx-auto px-2 md:px-2 flex items-center justify-between gap-4">
         {/* Logo */}
-        <Logo className="w-40 lg:w-20" />
+        <Logo className="w-40 md:w-25 lg:w-30" />
 
         {/* Desktop Navigation */}
         <ul
           className={cn(
-            "text-xs md:text-sm lg:text-xs font-bai-jamjuree",
             "rounded-full border-2 border-white shadow-sm",
-            "hidden md:flex items-center justify-center gap-2 lg:gap-4 p-2 md:p-3 bg-[#064C3C]",
+            "text-xs md:text-[9px] lg:text-xs font-bai-jamjuree",
+            "hidden md:flex items-center justify-center gap-2 md:gap-1.5 lg:gap-2 p-2 md:p-2 lg:p-3 bg-[#064C3C]",
           )}
         >
           {navLinks.map((link) => (
@@ -60,7 +60,7 @@ export function NavBar() {
         </ul>
 
         {/* Desktop Buttons */}
-        <div className="hidden md:flex items-center gap-2 lg:gap-4 font-bai-jamjuree text-xs lg:text-sm">
+        <div className="hidden md:flex items-center gap-2 md:gap-2 font-bai-jamjuree text-xs lg:text-sm">
           <Button variant="default" className="rounded-full shadow-sm text-xs">
             Learn More
           </Button>
