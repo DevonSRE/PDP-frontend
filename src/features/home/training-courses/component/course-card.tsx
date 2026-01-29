@@ -35,9 +35,15 @@ export function CourseCard({
         <p className="text-gray-600 text-xs md:text-sm items-start text-justify md:text-start">
           {description}
         </p>
-        <button className="bg-brand-green-extralight py-2 w-full rounded-md hover:bg-brand-green-light text-white text-xs transition-colors duration-300">
-          View Course
-        </button>
+        <a
+          target="_blank"
+          href="https://drive.google.com/file/d/1lmAIxySrKY9siYfOgORM-58Z9xDTHYtd/view"
+          className="h-fit w-full"
+        >
+          <button className="bg-brand-green-extralight py-2 w-full rounded-md hover:bg-brand-green-light text-white text-xs transition-colors duration-300">
+            View Course
+          </button>
+        </a>
       </div>
     </div>
   );

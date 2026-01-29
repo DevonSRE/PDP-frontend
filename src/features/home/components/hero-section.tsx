@@ -53,7 +53,8 @@ export function HeroSection() {
             2026 Course Schedule now available,
           </span>
           <Link
-            href="#"
+            href="https://drive.google.com/file/d/1lmAIxySrKY9siYfOgORM-58Z9xDTHYtd/view"
+            target="_blank"
             className="underline text-xs md:text-base font-medium flex items-center gap-0.5 md:gap-1"
           >
             View <span className="hidden md:inline">Schedule</span>
@@ -91,7 +92,8 @@ export function HeroSection() {
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center md:mb-12">
           <Link
-            href="#"
+            download
+            href="/docs/PDP-Course-Enrolement-form.pdf"
             className={cn(
               buttonVariants(),
               "!px-8 py-7 bg-brand-green-light rounded-2xl shadow-md hover:bg-teal-800",
@@ -101,7 +103,8 @@ export function HeroSection() {
             Book Training Now
           </Link>
           <Link
-            href="#"
+            href="https://drive.google.com/file/d/1lmAIxySrKY9siYfOgORM-58Z9xDTHYtd/view"
+            target="_blank"
             className={cn(
               buttonVariants({ variant: "outline" }),
               "!px-8 py-7 ring-2 border-none text-brand-green-light rounded-2xl font-medium hover:bg-teal-50 transition-colors  flex items-center gap-2",

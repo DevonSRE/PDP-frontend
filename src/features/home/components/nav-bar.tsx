@@ -64,12 +64,14 @@ export function NavBar() {
           <Button variant="default" className="rounded-full shadow-sm text-xs">
             Learn More
           </Button>
-          <Button
-            variant="outline"
-            className="border-black rounded-full shadow-sm text-xs"
-          >
-            Book Now
-          </Button>
+          <Link download href="/docs/PDP-Course-Enrolement-form.pdf">
+            <Button
+              variant="outline"
+              className="border-black rounded-full shadow-sm text-xs"
+            >
+              Book Now
+            </Button>
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -125,9 +127,12 @@ export function NavBar() {
                 <button className="w-full px-6 py-2 bg-black text-white rounded-full font-medium shadow-sm hover:bg-gray-800 transition-colors duration-200 font-bai-jamjuree">
                   Learn More
                 </button>
-                <button className="w-full px-6 py-2 bg-white text-black border-2 border-black rounded-full font-medium shadow-sm hover:bg-gray-100 transition-colors duration-200 font-bai-jamjuree">
-                  Book Now
-                </button>
+
+                <Link download href="/docs/PDP-Course-Enrolement-form.pdf">
+                  <button className="w-full px-6 py-2 bg-white text-black border-2 border-black rounded-full font-medium shadow-sm hover:bg-gray-100 transition-colors duration-200 font-bai-jamjuree">
+                    Book Now
+                  </button>
+                </Link>
               </div>
             </m.div>
           </m.div>
