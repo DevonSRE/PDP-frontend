@@ -114,7 +114,11 @@ export function Footer() {
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-white">
+                    <a
+                      href="https://drive.google.com/file/d/1lmAIxySrKY9siYfOgORM-58Z9xDTHYtd/view"
+                      target="_blank"
+                      className="hover:text-white"
+                    >
                       2026 Course Schedule
                     </a>
                   </li>
