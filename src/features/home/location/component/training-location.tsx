@@ -49,7 +49,7 @@ const locations = [
   {
     imageSrc: "/assets/location.svg",
     locationName: "Tashkent, Uzbekistan",
-    date: "May & September 2025",
+    date: "May & September 2026",
     location: "International Hotel, Tashkent",
     description:
       "Our Central Asia location serves professionals from former Soviets republics with tailored governance programs.",
@@ -57,7 +57,7 @@ const locations = [
   {
     imageSrc: "/assets/location2.svg",
     locationName: "Kigali, Rwanda",
-    date: "March & October 2025",
+    date: "March & October 2026",
     location: "Kigali Convention Center",
     description:
       "Our flagship location features state-of-the-art training facilities in Nigeria's capital city, ideal for government and private sector participants.",
@@ -65,7 +65,7 @@ const locations = [
   {
     imageSrc: "/assets/location.svg",
     locationName: "Accra, Ghana",
-    date: "June & November 2025",
+    date: "June & November 2026",
     location: "Kempinski Hotel Gold Coast City",
     description:
       "Our West African hub offers premium training facilities with easy access from across the ECOWAS region.",
@@ -73,7 +73,7 @@ const locations = [
   {
     imageSrc: "/assets/location.svg",
     locationName: "Lagos, Nigeria",
-    date: "June & November 2025",
+    date: "June & November 2026",
     location: "Victoria Island",
     description:
       "The vibrant location offers modern amenities and access to key financial districts, making it perfect for corporate training sessions.",
@@ -81,7 +81,7 @@ const locations = [
   {
     imageSrc: "/assets/location.svg",
     locationName: "Kano, Nigeria",
-    date: "July & December 2025",
+    date: "July & December 2026",
     location: "Kano City Center",
     description:
       "In the heart of Northern Nigeria, this center combines cultural richness with advanced learning environments, catering to local and international audiences.",
@@ -89,8 +89,56 @@ const locations = [
   {
     imageSrc: "/assets/location2.svg",
     locationName: "Abuja, Nigeria",
-    date: "March & October 2025",
+    date: "March & October 2026",
     location: "Central Business District",
+    description:
+      "Our flagship location features state-of-the-art training facilities in Nigeria's capital city, ideal for government and private sector participants.",
+  },
+  {
+    imageSrc: "/assets/location2.svg",
+    locationName: "Cross Rivers, Nigeria",
+    date: "March & October 2026",
+    location: "Obudu",
+    description:
+      "Our flagship location features state-of-the-art training facilities in Nigeria's capital city, ideal for government and private sector participants.",
+  },
+  {
+    imageSrc: "/assets/location2.svg",
+    locationName: "United Kingdom",
+    date: "March & October 2026",
+    location: "Obudu",
+    description:
+      "Our flagship location features state-of-the-art training facilities in Nigeria's capital city, ideal for government and private sector participants.",
+  },
+  {
+    imageSrc: "/assets/location2.svg",
+    locationName: "Kenya",
+    date: "March & October 2026",
+    location: "Obudu",
+    description:
+      "Our flagship location features state-of-the-art training facilities in Nigeria's capital city, ideal for government and private sector participants.",
+  },
+  {
+    imageSrc: "/assets/location2.svg",
+    locationName: "Mauritius",
+    date: "March & October 2026",
+    location: "Obudu",
+    description:
+      "Our flagship location features state-of-the-art training facilities in Nigeria's capital city, ideal for government and private sector participants.",
+  },
+  {
+    imageSrc: "/assets/location2.svg",
+    locationName: "Cape Town",
+    date: "March & October 2026",
+    location: "Obudu",
+    description:
+      "Our flagship location features state-of-the-art training facilities in Nigeria's capital city, ideal for government and private sector participants.",
+  },
+  {
+    imageSrc: "/assets/location2.svg",
+    locationName: "Canada",
+    date: "March & October 2026",
+    location: "Obudu",
     description:
       "Our flagship location features state-of-the-art training facilities in Nigeria's capital city, ideal for government and private sector participants.",
   },
