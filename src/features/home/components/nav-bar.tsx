@@ -61,9 +61,11 @@ export function NavBar() {
 
         {/* Desktop Buttons */}
         <div className="hidden md:flex items-center gap-2 md:gap-2 font-bai-jamjuree text-xs lg:text-sm">
-          <Button variant="default" className="rounded-full shadow-sm text-xs">
-            Learn More
-          </Button>
+          <Link href="/services">
+            <Button variant="default" className="rounded-full shadow-sm text-xs">
+              Learn More
+            </Button>
+          </Link>
           <Link download href="/docs/PDP-Course-Enrolement-form.pdf">
             <Button
               variant="outline"
@@ -124,9 +126,11 @@ export function NavBar() {
                 ))}
               </ul>
               <div className="flex flex-col space-y-2 px-4 pb-4">
-                <button className="w-full px-6 py-2 bg-black text-white rounded-full font-medium shadow-sm hover:bg-gray-800 transition-colors duration-200 font-bai-jamjuree">
-                  Learn More
-                </button>
+                <Link href="/services" onClick={() => setIsMobileMenuOpen(false)}>
+                  <button className="w-full px-6 py-2 bg-black text-white rounded-full font-medium shadow-sm hover:bg-gray-800 transition-colors duration-200 font-bai-jamjuree">
+                    Learn More
+                  </button>
+                </Link>
 
                 <Link download href="/docs/PDP-Course-Enrolement-form.pdf">
                   <button className="w-full px-6 py-2 bg-white text-black border-2 border-black rounded-full font-medium shadow-sm hover:bg-gray-100 transition-colors duration-200 font-bai-jamjuree">
