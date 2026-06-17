@@ -25,7 +25,7 @@ export function TrainingSectionHeader() {
         <div className="relative max-w-full md:max-w-7xl w-full mx-auto z-10 flex flex-col gap-6 md:gap-12">
           <div className="text-center flex flex-col gap-4">
             <h1 className="text-xl sm:text-4xl font-extrabold flex flex-col md:flex-row items-center">
-              2025 Professional&nbsp;
+              2026 Professional&nbsp;
               <span className="text-brand-green-extralight">
                 Training Programs
               </span>
