@@ -1,3 +1,16 @@
+export interface ApiResponse<T = Record<string, unknown>> {
+  message: string;
+  status: number;
+  data: T | null;
+  error: Record<string, unknown> | string | null;
+}
+
+export interface ContactFormData {
+  name: string;
+  email: string;
+  message: string;
+}
+
 export type GENDER = "MALE" | "FEMALE";
 export type STATUS = "ACTIVE" | "INACTIVE";
 export type ROLE = "PLATFORM_ADMIN" | "ADMIN" | "USER";
