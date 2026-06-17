@@ -47,7 +47,7 @@ export function TrainingLocations() {
 
 const locations = [
   {
-    imageSrc: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop",
+    imageSrc: "https://images.unsplash.com/photo-1637856794303-d864ce316444?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     locationName: "Tashkent, Uzbekistan",
     date: "May & September",
     location: "International Hotel, Tashkent",
@@ -55,7 +55,7 @@ const locations = [
       "Our Central Asia location serves professionals from former Soviets republics with tailored governance programs.",
   },
   {
-    imageSrc: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop",
+    imageSrc: "https://plus.unsplash.com/premium_photo-1689700527469-2058de61afed?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     locationName: "Kigali, Rwanda",
     date: "March & October",
     location: "Kigali Convention Center",
@@ -63,7 +63,7 @@ const locations = [
       "Our flagship location features state-of-the-art training facilities in Nigeria's capital city, ideal for government and private sector participants.",
   },
   {
-    imageSrc: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop",
+    imageSrc: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     locationName: "Accra, Ghana",
     date: "June & November",
     location: "Kempinski Hotel Gold Coast City",
@@ -71,7 +71,7 @@ const locations = [
       "Our West African hub offers premium training facilities with easy access from across the ECOWAS region.",
   },
   {
-    imageSrc: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop",
+    imageSrc: "https://plus.unsplash.com/premium_photo-1723914049551-ea4820077aa7?q=80&w=3174&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     locationName: "Lagos, Nigeria",
     date: "June & November",
     location: "Victoria Island",
@@ -79,7 +79,7 @@ const locations = [
       "The vibrant location offers modern amenities and access to key financial districts, making it perfect for corporate training sessions.",
   },
   {
-    imageSrc: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop",
+    imageSrc: "https://images.unsplash.com/photo-1743834147172-37c12011b321?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     locationName: "Kano, Nigeria",
     date: "July & December",
     location: "Kano City Center",
@@ -87,7 +87,7 @@ const locations = [
       "In the heart of Northern Nigeria, this center combines cultural richness with advanced learning environments, catering to local and international audiences.",
   },
   {
-    imageSrc: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop",
+    imageSrc: "https://images.unsplash.com/photo-1758270704602-9d4103704ad4?q=80&w=3131&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     locationName: "Abuja, Nigeria",
     date: "March & October",
     location: "Central Business District",
@@ -95,7 +95,7 @@ const locations = [
       "Our flagship location features state-of-the-art training facilities in Nigeria's capital city, ideal for government and private sector participants.",
   },
   {
-    imageSrc: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop",
+    imageSrc: "https://images.unsplash.com/photo-1601373734970-a52f841b98b2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     locationName: "Cross Rivers, Nigeria",
     date: "March & October",
     location: "Obudu",
@@ -103,7 +103,7 @@ const locations = [
       "Our flagship location features state-of-the-art training facilities in Nigeria's capital city, ideal for government and private sector participants.",
   },
   {
-    imageSrc: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop",
+    imageSrc: "https://images.unsplash.com/photo-1755718669986-6a64e677420c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     locationName: "United Kingdom",
     date: "March & October",
     location: "Obudu",
@@ -111,7 +111,7 @@ const locations = [
       "Our flagship location features state-of-the-art training facilities in Nigeria's capital city, ideal for government and private sector participants.",
   },
   {
-    imageSrc: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop",
+    imageSrc: "https://images.unsplash.com/photo-1637856794303-d864ce316444?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     locationName: "Kenya",
     date: "March & October",
     location: "Obudu",
@@ -119,7 +119,7 @@ const locations = [
       "Our flagship location features state-of-the-art training facilities in Nigeria's capital city, ideal for government and private sector participants.",
   },
   {
-    imageSrc: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop",
+    imageSrc: "https://plus.unsplash.com/premium_photo-1689700527469-2058de61afed?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     locationName: "Mauritius",
     date: "March & October",
     location: "Obudu",
@@ -127,7 +127,7 @@ const locations = [
       "Our flagship location features state-of-the-art training facilities in Nigeria's capital city, ideal for government and private sector participants.",
   },
   {
-    imageSrc: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop",
+    imageSrc: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     locationName: "Cape Town",
     date: "March & October",
     location: "Obudu",
@@ -135,7 +135,7 @@ const locations = [
       "Our flagship location features state-of-the-art training facilities in Nigeria's capital city, ideal for government and private sector participants.",
   },
   {
-    imageSrc: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop",
+    imageSrc: "https://plus.unsplash.com/premium_photo-1723914049551-ea4820077aa7?q=80&w=3174&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     locationName: "Canada",
     date: "March & October",
     location: "Obudu",
@@ -160,8 +160,9 @@ function TrainingLocationCard(props: TTrainingLocationCardProps) {
           <Image
             src={imageSrc}
             alt={locationName}
-            height={100}
-            width={200}
+            height={200}
+            width={400}
+            unoptimized
             className="object-cover object-center aspect-video h-full w-full"
           />
         </div>
