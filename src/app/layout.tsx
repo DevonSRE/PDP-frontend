@@ -10,6 +10,7 @@ import "./globals.css";
 
 import { Toaster } from "@/components/ui/sonner";
 import { cn } from "@/lib/utils";
+import { QueryClientProvider } from "@/providers/query-client";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -62,8 +63,10 @@ export default function RootLayout({
           "antialiased",
         )}
       >
-        {children}
-        <Toaster position="top-right" richColors />
+        <QueryClientProvider>
+          {children}
+          <Toaster position="top-right" richColors />
+        </QueryClientProvider>
       </body>
     </html>
   );

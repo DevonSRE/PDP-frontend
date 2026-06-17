@@ -5,7 +5,7 @@ interface ProfessionalCardProps {
   name: string;
   title: string;
   description: string;
-  image: string;
+  image?: string;
 }
 
 export function ProfessionalCard({
@@ -17,9 +17,13 @@ export function ProfessionalCard({
   return (
     <div
       className="relative overflow-hidden h-96 md:h-112 w-full md:w-80 bg-cover bg-center"
-      style={{
-        backgroundImage: `linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.6)), url(${image})`,
-      }}
+      style={
+        !!image
+          ? {
+              backgroundImage: `linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.6)), url(${image})`,
+            }
+          : {}
+      }
     >
       {/* Content */}
       <div className="absolute inset-0 flex flex-col gap-4 justify-end p-6 text-white text-center">

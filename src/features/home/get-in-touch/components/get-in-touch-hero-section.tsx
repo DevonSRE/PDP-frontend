@@ -65,10 +65,20 @@ export function GetContactSection() {
               <a href="#" className="hover:text-teal-300">
                 <Twitter size={20} />
               </a>
-              <a href="#" className="hover:text-teal-300">
+              <a
+                href="https://www.instagram.com/pdp_ltd/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-teal-300"
+              >
                 <Instagram size={20} />
               </a>
-              <a href="#" className="hover:text-teal-300">
+              <a
+                href="https://www.linkedin.com/company/pivotal-development-partners-limited/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-teal-300"
+              >
                 <Linkedin size={20} />
               </a>
             </div>

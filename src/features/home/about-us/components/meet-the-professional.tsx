@@ -36,7 +36,7 @@ export function MeetTheProfessional() {
               name={pro.name}
               title={pro.title}
               description={pro.description}
-              image={pro.image}
+              image={pro?.image}
             />
           ))}
         </div>
@@ -45,14 +45,21 @@ export function MeetTheProfessional() {
   );
 }
 
-const professionals = [
+const professionals: {
+  id: number;
+  name: string;
+  title: string;
+  description: string;
+  image?: string;
+  flagImage?: string;
+}[] = [
   {
     id: 1,
     name: "Olivia Rhye",
     title: "Senior Governance Advisor or Lead \nProcurement Facilitator",
     description:
       "Expert in public financial management and institutional reforms across Africa. Over 20 years training senior civil servants and procurement professionals.",
-    image: "/assets/pro1.svg",
+    // image: "/assets/pro1.svg",
     flagImage: undefined,
   },
   {
@@ -61,7 +68,7 @@ const professionals = [
     title: "Senior Governance Advisor or Lead  \nProcurement Facilitator",
     description:
       "Expert in public financial management and institutional reforms across Africa. Over 20 years training senior civil servants and procurement professionals.",
-    image: "/assets/pro2.svg",
+    // image: "/assets/pro2.svg",
     flagImage: undefined,
   },
   {
@@ -70,16 +77,17 @@ const professionals = [
     title: "Senior Governance Advisor or Lead  \nProcurement Facilitator",
     description:
       "Expert in public financial management and institutional reforms across Africa. Over 20 years training senior civil servants and procurement professionals.",
-    image: "/assets/pro3.svg",
+    // image: "/assets/pro3.svg",
     flagImage: undefined,
   },
+  /*
   {
     id: 4,
     name: "Olivia Rhye",
     title: "Senior Governance Advisor or Lead  \nProcurement Facilitator",
     description:
       "Expert in public financial management and institutional reforms across Africa. Over 20 years training senior civil servants and procurement professionals.",
-    image: "/assets/pro1.svg",
+    // image: "/assets/pro1.svg",
     flagImage: undefined,
   },
   {
@@ -88,7 +96,7 @@ const professionals = [
     title: "Senior Governance Advisor or Lead  \nProcurement Facilitator",
     description:
       "Expert in public financial management and institutional reforms across Africa. Over 20 years training senior civil servants and procurement professionals.",
-    image: "/assets/pro2.svg",
+    // image: "/assets/pro2.svg",
     flagImage: undefined,
   },
   {
@@ -97,7 +105,8 @@ const professionals = [
     title: "Senior Governance Advisor or Lead  \nProcurement Facilitator",
     description:
       "Expert in public financial management and institutional reforms across Africa. Over 20 years training senior civil servants and procurement professionals.",
-    image: "/assets/pro3.svg",
+    // image: "/assets/pro3.svg",
     flagImage: undefined,
   },
+  */
 ];

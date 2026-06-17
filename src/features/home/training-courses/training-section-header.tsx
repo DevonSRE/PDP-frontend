@@ -1,6 +1,7 @@
 import { SpikyCicle } from "@/components/icon/spiky-circle";
 import { Button } from "@/components/ui/button";
 import { GraduationCapIcon } from "lucide-react";
+import Link from "next/link";
 import React from "react";
 
 export function TrainingSectionHeader() {
@@ -24,7 +25,7 @@ export function TrainingSectionHeader() {
         <div className="relative max-w-full md:max-w-7xl w-full mx-auto z-10 flex flex-col gap-6 md:gap-12">
           <div className="text-center flex flex-col gap-4">
             <h1 className="text-xl sm:text-4xl font-extrabold flex flex-col md:flex-row items-center">
-              2025 Professional&nbsp;
+              2026 Professional&nbsp;
               <span className="text-brand-green-extralight">
                 Training Programs
               </span>
@@ -34,17 +35,24 @@ export function TrainingSectionHeader() {
               governance, procurement, and strategic development.
             </p>
             <div className="flex flex-col md:flex-row justify-center items-center gap-4 w-full md:w-fit">
-              <Button className="bg-brand-green-light rounded-3xl !px-9 py-7 flex items-center gap-2.5 hover:bg-brand-green-extralight w-full md:w-fit">
-                <GraduationCapIcon className="w-16 h-16" />
-                <span>Book Training Now</span>
-              </Button>
+              <Link download href="/docs/PDP-Course-Enrolement-form.pdf">
+                <Button className="bg-brand-green-light rounded-3xl !px-9 py-7 flex items-center gap-2.5 hover:bg-brand-green-extralight w-full md:w-fit">
+                  <GraduationCapIcon className="w-16 h-16" />
+                  <span>Book Training Now</span>
+                </Button>
+              </Link>
 
-              <Button
-                variant="outline"
-                className="border-2 border-brand-green-light text-brand-green-light py-6.5 px-9 rounded-3xl w-full md:w-fit"
+              <Link
+                href="https://drive.google.com/file/d/1lmAIxySrKY9siYfOgORM-58Z9xDTHYtd/view"
+                target="_blank"
               >
-                <span className="mr-2">📅</span> View 2025 Course Schedule
-              </Button>
+                <Button
+                  variant="outline"
+                  className="border-2 border-brand-green-light text-brand-green-light py-6.5 px-9 rounded-3xl w-full md:w-fit"
+                >
+                  <span className="mr-2">📅</span> View 2026 Course Schedule
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
