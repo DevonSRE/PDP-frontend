@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { CircleCheckIcon } from "lucide-react";
+import Link from "next/link";
 
 export function TrainingPrograms() {
   return (
@@ -26,9 +27,15 @@ export function TrainingPrograms() {
             />
           ))}
         </div>
-        <Button className="bg-brand-green-extralight hover:bg-brand-green-extralight/80 w-full py-7 text-sm">
-          Download Guide Document
-        </Button>
+        <Link
+          href="https://drive.google.com/file/d/1lmAIxySrKY9siYfOgORM-58Z9xDTHYtd/view"
+          target="_blank"
+          className="w-full"
+        >
+          <Button className="bg-brand-green-extralight hover:bg-brand-green-extralight/80 w-full py-7 text-sm">
+            View Guide Document
+          </Button>
+        </Link>
       </div>
     </section>
   );

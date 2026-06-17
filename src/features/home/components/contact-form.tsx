@@ -1,10 +1,15 @@
 "use client";
 
-import React from "react";
+import React, { useRef } from "react";
+import { useMutation } from "@tanstack/react-query";
+import { toast } from "sonner";
+import { AxiosError } from "axios";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 import TextareaAutosize from "react-textarea-autosize";
+import httpClient from "@/server/http-client";
+import { ApiResponse, ContactFormData } from "@/lib/types";
 
 export function ContactSection() {
   return (
@@ -43,29 +48,80 @@ export function ContactSection() {
 }
 
 export function ContactForm() {
+  const formRef = useRef<HTMLFormElement>(null);
+  const nameRef = useRef<HTMLInputElement>(null);
+  const emailRef = useRef<HTMLInputElement>(null);
+  const messageRef = useRef<HTMLTextAreaElement>(null);
+
+  const mutation = useMutation<ApiResponse, AxiosError<ApiResponse>, ContactFormData>({
+    mutationFn: async (data: ContactFormData): Promise<ApiResponse> => {
+      const response = await httpClient.post<ApiResponse>("/send-mail", data);
+      return response.data;
+    },
+    onSuccess: (data) => {
+      if (data.status >= 200 && data.status < 300) {
+        toast.success(data.message || "Message sent successfully!");
+        formRef.current?.reset();
+      } else {
+        toast.error(data.message || "Failed to send message");
+      }
+    },
+    onError: (error: AxiosError<ApiResponse>) => {
+      toast.error(
+        error.response?.data?.message || "Failed to send message"
+      );
+    },
+  });
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const name = nameRef.current?.value?.trim();
+    const email = emailRef.current?.value?.trim();
+    const message = messageRef.current?.value?.trim();
+
+    if (!name || !email || !message) {
+      toast.error("Please fill in all fields");
+      return;
+    }
+
+    mutation.mutate({ name, email, message });
+  };
+
   return (
     <form
-      action=""
+      ref={formRef}
+      onSubmit={handleSubmit}
       className="font-poppins flex flex-col max-w-full md:max-w-3xl w-full mx-auto gap-4"
     >
       <Input
+        ref={nameRef}
         type="text"
         placeholder="Your full name"
         className="h-12 !py-7 !px-4 placeholder:text-white w-full"
+        disabled={mutation.isPending}
       />
       <Input
+        ref={emailRef}
         type="email"
         placeholder="Your Email"
         className="h-12 !py-7 !px-4 placeholder:text-white w-full"
+        disabled={mutation.isPending}
       />
       <TextareaAutosize
-        className="p-2 text-sm placeholder:text-white w-full rounded-lg border border-input"
+        ref={messageRef}
+        className="p-2 text-sm placeholder:text-white w-full rounded-lg border border-input disabled:opacity-50"
         placeholder="Your Message"
         minRows={3}
+        disabled={mutation.isPending}
       />
 
-      <Button type="submit" className="bg-brand-yellow-dark h-14 text-black">
-        Send Message
+      <Button
+        type="submit"
+        className="bg-brand-yellow-dark h-14 text-black disabled:opacity-50"
+        disabled={mutation.isPending}
+      >
+        {mutation.isPending ? "Sending..." : "Send Message"}
       </Button>
     </form>
   );

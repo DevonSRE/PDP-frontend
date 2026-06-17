@@ -3,7 +3,11 @@ import { cn } from "@/lib/utils";
 import { AtSignIcon } from "lucide-react";
 import React from "react";
 
-export function CallToAction() {
+interface CallToActionProps {
+  onGetInTouchClick?: () => void;
+}
+
+export function CallToAction({ onGetInTouchClick }: CallToActionProps) {
   return (
     <section className="relative w-full overflow-hidden h-[75dvh] bg-neutral-50 flex justify-center items-center px-7 md:px-10">
       {/* Background SVG */}
@@ -24,6 +28,7 @@ export function CallToAction() {
         </p>
 
         <button
+          onClick={onGetInTouchClick}
           className={cn(
             "text-white text-sm",
             "mx-auto px-8 py-4 rounded-2xl",

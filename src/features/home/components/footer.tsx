@@ -60,27 +60,27 @@ export function Footer() {
                 </h4>
                 <ul className="space-y-2 text-sm">
                   <li>
-                    <a href="#" className="hover:text-white">
+                    <a href="/about-us" className="hover:text-white">
                       About Us
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-white">
+                    <a href="/services" className="hover:text-white">
                       Our Services
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-white">
+                    <a href="/training-courses" className="hover:text-white">
                       Training Courses
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-white">
+                    <a href="/get-in-touch" className="hover:text-white">
                       Join our Community
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-white">
+                    <a href="/services" className="hover:text-white">
                       What We Do
                     </a>
                   </li>
@@ -114,7 +114,11 @@ export function Footer() {
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-white">
+                    <a
+                      href="https://drive.google.com/file/d/1lmAIxySrKY9siYfOgORM-58Z9xDTHYtd/view"
+                      target="_blank"
+                      className="hover:text-white"
+                    >
                       2026 Course Schedule
                     </a>
                   </li>
@@ -224,13 +228,17 @@ export function Footer() {
             </h4>
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="https://www.instagram.com/pdp_ltd/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors duration-300"
               >
                 <InstagramIcon size={24} />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/company/pivotal-development-partners-limited/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors duration-300"
               >
                 <LinkedinIcon size={24} />
