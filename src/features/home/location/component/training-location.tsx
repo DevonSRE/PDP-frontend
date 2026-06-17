@@ -47,97 +47,97 @@ export function TrainingLocations() {
 
 const locations = [
   {
-    imageSrc: "/assets/location.svg",
+    imageSrc: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop",
     locationName: "Tashkent, Uzbekistan",
-    date: "May & September 2026",
+    date: "May & September",
     location: "International Hotel, Tashkent",
     description:
       "Our Central Asia location serves professionals from former Soviets republics with tailored governance programs.",
   },
   {
-    imageSrc: "/assets/location2.svg",
+    imageSrc: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop",
     locationName: "Kigali, Rwanda",
-    date: "March & October 2026",
+    date: "March & October",
     location: "Kigali Convention Center",
     description:
       "Our flagship location features state-of-the-art training facilities in Nigeria's capital city, ideal for government and private sector participants.",
   },
   {
-    imageSrc: "/assets/location.svg",
+    imageSrc: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop",
     locationName: "Accra, Ghana",
-    date: "June & November 2026",
+    date: "June & November",
     location: "Kempinski Hotel Gold Coast City",
     description:
       "Our West African hub offers premium training facilities with easy access from across the ECOWAS region.",
   },
   {
-    imageSrc: "/assets/location.svg",
+    imageSrc: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop",
     locationName: "Lagos, Nigeria",
-    date: "June & November 2026",
+    date: "June & November",
     location: "Victoria Island",
     description:
       "The vibrant location offers modern amenities and access to key financial districts, making it perfect for corporate training sessions.",
   },
   {
-    imageSrc: "/assets/location.svg",
+    imageSrc: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop",
     locationName: "Kano, Nigeria",
-    date: "July & December 2026",
+    date: "July & December",
     location: "Kano City Center",
     description:
       "In the heart of Northern Nigeria, this center combines cultural richness with advanced learning environments, catering to local and international audiences.",
   },
   {
-    imageSrc: "/assets/location2.svg",
+    imageSrc: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop",
     locationName: "Abuja, Nigeria",
-    date: "March & October 2026",
+    date: "March & October",
     location: "Central Business District",
     description:
       "Our flagship location features state-of-the-art training facilities in Nigeria's capital city, ideal for government and private sector participants.",
   },
   {
-    imageSrc: "/assets/location2.svg",
+    imageSrc: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop",
     locationName: "Cross Rivers, Nigeria",
-    date: "March & October 2026",
+    date: "March & October",
     location: "Obudu",
     description:
       "Our flagship location features state-of-the-art training facilities in Nigeria's capital city, ideal for government and private sector participants.",
   },
   {
-    imageSrc: "/assets/location2.svg",
+    imageSrc: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop",
     locationName: "United Kingdom",
-    date: "March & October 2026",
+    date: "March & October",
     location: "Obudu",
     description:
       "Our flagship location features state-of-the-art training facilities in Nigeria's capital city, ideal for government and private sector participants.",
   },
   {
-    imageSrc: "/assets/location2.svg",
+    imageSrc: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop",
     locationName: "Kenya",
-    date: "March & October 2026",
+    date: "March & October",
     location: "Obudu",
     description:
       "Our flagship location features state-of-the-art training facilities in Nigeria's capital city, ideal for government and private sector participants.",
   },
   {
-    imageSrc: "/assets/location2.svg",
+    imageSrc: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop",
     locationName: "Mauritius",
-    date: "March & October 2026",
+    date: "March & October",
     location: "Obudu",
     description:
       "Our flagship location features state-of-the-art training facilities in Nigeria's capital city, ideal for government and private sector participants.",
   },
   {
-    imageSrc: "/assets/location2.svg",
+    imageSrc: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop",
     locationName: "Cape Town",
-    date: "March & October 2026",
+    date: "March & October",
     location: "Obudu",
     description:
       "Our flagship location features state-of-the-art training facilities in Nigeria's capital city, ideal for government and private sector participants.",
   },
   {
-    imageSrc: "/assets/location2.svg",
+    imageSrc: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop",
     locationName: "Canada",
-    date: "March & October 2026",
+    date: "March & October",
     location: "Obudu",
     description:
       "Our flagship location features state-of-the-art training facilities in Nigeria's capital city, ideal for government and private sector participants.",
@@ -184,7 +184,7 @@ function TrainingLocationCard(props: TTrainingLocationCardProps) {
       </CardHeader>
       <CardFooter>
         <CardAction className="w-full">
-          <Button className="w-full rounded bg-brand-green-extralight">
+          <Button disabled className="w-full rounded bg-brand-green-extralight disabled:opacity-50 disabled:cursor-not-allowed">
             View Details
           </Button>
         </CardAction>
